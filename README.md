@@ -8,7 +8,7 @@ This website showcases my engineering projects, undergraduate thesis, design exp
 
 Click below to view my website:
 
-👉 **[rossjones.github.io/portfolio](https://hellorossj.github.io/portfolio/)**
+👉 **(https://hellorossj.github.io/portfolio/)**
 
 ---
 
