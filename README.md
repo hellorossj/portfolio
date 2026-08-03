@@ -4,11 +4,11 @@ Welcome to my engineering portfolio!
 
 This website showcases my engineering projects, undergraduate thesis, design experience, technical skills, and professional background.
 
-## 🌐 View My Live Portfolio
+## View My Live Portfolio
 
 Click below to view my website:
 
-👉 **[rossjones.github.io/Portfolio](https://hellorossj.github.io/portfolio/)**
+👉 **[rossjones.github.io/portfolio](https://hellorossj.github.io/portfolio/)**
 
 ---
 
