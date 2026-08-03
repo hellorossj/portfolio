@@ -1,0 +1,296 @@
+.navigation-bar {
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+
+
+.mode-toggle {
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    margin-right: 25px;
+
+}
+
+
+
+.nav-button {
+
+    font-family: 'Courier Prime', monospace !important;
+
+    font-size: 1rem !important;
+
+    font-weight: 500 !important;
+
+    text-transform: none !important;
+
+    background-color: transparent !important;
+
+    transition: color 0.3s ease !important;
+
+
+    &:hover {
+
+        color: #5000ca !important;
+
+        background-color: transparent !important;
+
+    }
+
+}
+
+
+
+/* DARK MODE */
+
+.dark-mode .navbar-fixed-top .nav-button {
+
+    color: white !important;
+
+}
+
+
+
+.dark-mode .navbar-fixed-top .nav-button:hover {
+
+    color: #5000ca !important;
+
+}
+
+
+
+
+
+/* LIGHT MODE */
+
+.light-mode .navbar-fixed-top .nav-button {
+
+    color: rgb(39,40,34) !important;
+
+}
+
+
+
+.light-mode .navbar-fixed-top .nav-button:hover {
+
+    color: #5000ca !important;
+
+}
+
+
+
+
+/* Prevent MUI AppBar overriding colors */
+
+.navbar-fixed-top .MuiButton-root {
+
+    background-color: transparent !important;
+
+}
+
+
+
+
+/* Mobile menu */
+
+.navigation-bar-responsive {
+
+    padding: 20px;
+
+}
+
+
+.mobile-menu-top {
+
+    font-family: 'Courier Prime', monospace;
+
+    font-size: 1.2rem;
+
+}
+
+.nav-links {
+
+    display:flex;
+
+    align-items:center;
+
+}
+
+.resume-button {
+
+    margin-left:10px !important;
+
+    border:1px solid currentColor !important;
+
+    border-radius:8px !important;
+
+    padding:6px 14px !important;
+
+}
+
+
+
+/* Make sure the text itself inherits */
+
+.resume-button span {
+
+    color:inherit !important;
+
+}
+
+
+
+/* DARK MODE */
+
+.dark-mode .resume-button {
+
+    color:white !important;
+
+    border-color:white !important;
+
+}
+
+
+
+.dark-mode .resume-button:hover {
+
+    background-color:#5000ca !important;
+
+    border-color:#5000ca !important;
+
+}
+
+
+
+.dark-mode .resume-button:hover span {
+
+    color:white !important;
+
+}
+
+
+
+
+
+/* LIGHT MODE */
+
+.light-mode .resume-button {
+
+    color:rgb(39,40,34) !important;
+
+    border-color:rgb(39,40,34) !important;
+
+}
+
+
+
+.light-mode .resume-button:hover {
+
+    background-color:#5000ca !important;
+
+    border-color:#5000ca !important;
+
+}
+
+
+
+.light-mode .resume-button:hover span {
+
+    color:rgb(39,40,34) !important;
+
+}
+
+/* ==========================================
+   RESUME BUTTON OVERRIDE
+   ========================================== */
+
+.navbar-fixed-top .resume-button.MuiButton-root {
+
+    margin-left:10px !important;
+
+    border:1px solid white !important;
+
+    border-radius:8px !important;
+
+    padding:6px 14px !important;
+
+}
+
+
+
+/* Force text colour */
+
+.navbar-fixed-top .resume-button.MuiButton-root,
+.navbar-fixed-top .resume-button.MuiButton-root span {
+
+    color:white !important;
+
+}
+
+
+
+/* Dark mode hover */
+
+.dark-mode .navbar-fixed-top .resume-button.MuiButton-root:hover,
+.dark-mode .navbar-fixed-top .resume-button.MuiButton-root:hover span {
+
+    color:white !important;
+
+}
+
+
+.dark-mode .navbar-fixed-top .resume-button.MuiButton-root:hover {
+
+    background-color:#5000ca !important;
+
+    border-color:#5000ca !important;
+
+}
+
+
+
+
+
+/* Light mode */
+
+.light-mode .navbar-fixed-top .resume-button.MuiButton-root,
+.light-mode .navbar-fixed-top .resume-button.MuiButton-root span {
+
+    color:rgb(39,40,34) !important;
+
+}
+
+
+
+.light-mode .navbar-fixed-top .resume-button.MuiButton-root {
+
+    border-color:rgb(39,40,34) !important;
+
+}
+
+
+
+.light-mode .navbar-fixed-top .resume-button.MuiButton-root:hover,
+.light-mode .navbar-fixed-top .resume-button.MuiButton-root:hover span {
+
+    color:rgb(255, 255, 255) !important;
+
+}
+
+
+
+.light-mode .navbar-fixed-top .resume-button.MuiButton-root:hover {
+
+    background-color:#5000ca !important;
+
+    border-color:#5000ca !important;
+
+}

@@ -1,0 +1,136 @@
+.projects-container {
+
+    display:flex;
+
+    flex-direction:column;
+
+    padding:5% 10%;
+
+    text-align:left;
+
+}
+
+
+
+.projects-container h1 {
+
+    margin-bottom:50px;
+
+}
+
+
+
+.projects-grid {
+
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:50px;
+
+
+}
+
+
+
+.project {
+
+
+    text-align:left;
+
+
+}
+
+
+
+.project a {
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+
+
+.project h2 {
+
+
+    margin-top:20px;
+
+    transition:0.2s;
+
+
+}
+
+
+
+.project h2:hover {
+
+
+    text-decoration:underline;
+
+
+}
+
+
+
+.zoom {
+
+
+    border-radius:10px;
+
+    transition:transform .2s;
+
+    width:100%;
+
+
+}
+
+
+
+.zoom:hover {
+
+
+    transform:scale(1.05);
+
+
+}
+
+
+
+@media(max-width:700px){
+
+
+    .projects-container {
+
+
+        padding-left:5%;
+
+        padding-right:5%;
+
+
+    }
+
+
+    .projects-grid {
+
+
+        display:block;
+
+
+    }
+
+
+
+    .project {
+
+
+        padding-bottom:50px;
+
+
+    }
+
+
+}

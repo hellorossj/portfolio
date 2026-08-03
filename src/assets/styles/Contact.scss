@@ -1,0 +1,258 @@
+.contact_wrapper svg {
+  font-size: 1em;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+
+
+.contact-form {
+
+  button {
+
+    float: right;
+
+    background-color: rgba(255, 255, 255, 0);
+
+    color: #050f0b;
+
+    margin-top: 10px;
+
+    border: 1px solid #777;
+
+  }
+
+
+  button:hover {
+
+    background-color: #5000ca;
+
+    color: white;
+
+    border-color: #5000ca;
+
+  }
+
+}
+
+
+/* Dark mode button */
+.dark-mode .contact-form button {
+
+  background-color: transparent;
+
+  color: #aaa;
+
+  border: 1px solid #aaa;
+
+}
+
+
+/* Dark mode hover */
+.dark-mode .contact-form button:hover {
+
+  background-color: #5000ca;
+
+  color: white;
+
+  border-color: #5000ca;
+
+}
+
+
+
+/* spacing between fields */
+
+.contact-form .MuiTextField-root {
+
+  margin-bottom: 20px;
+
+}
+
+
+
+/* field background */
+
+.contact-form .MuiOutlinedInput-root {
+
+  background-color: rgba(255, 255, 255, 0);
+
+
+  fieldset {
+
+    border-color: #777;
+
+  }
+
+
+  &:hover fieldset {
+
+    border-color: #5000ca;
+
+  }
+
+
+  &.Mui-focused fieldset {
+
+    border-color: #5000ca;
+
+    border-width: 2px;
+
+  }
+
+}
+
+
+/* typed text */
+
+.contact-form .MuiInputBase-input {
+
+  color: #050f0b;
+
+  font-size: 1.1rem;
+
+}
+
+
+
+/* placeholder inside box */
+
+.contact-form .MuiInputBase-input::placeholder {
+
+  color: #777;
+
+  opacity: 1;
+
+}
+
+
+
+
+
+/* floating labels */
+
+.contact-form .MuiInputLabel-root {
+
+  color: #5000ca;
+
+  font-size: 1rem;
+
+  transform: translate(14px, -12px) scale(0.85);
+
+  background: transparent;
+
+}
+
+
+
+
+
+/* layout */
+
+.form-flex {
+
+  display: flex;
+
+  gap: 30px;
+
+  padding-bottom: 10px;
+
+}
+
+
+
+.form-flex .MuiFormControl-root {
+
+  width: 100%;
+
+}
+
+
+
+form {
+
+  width: 100% !important;
+
+}
+
+
+
+.body-form {
+
+  width: 100% !important;
+
+}
+
+
+
+
+
+/* DARK MODE */
+
+.dark-mode .contact-form .MuiOutlinedInput-root {
+
+  background-color: rgba(0, 0, 0, 0);
+
+}
+
+
+
+.dark-mode .contact-form .MuiInputBase-input {
+
+  color: white;
+
+}
+
+
+
+.dark-mode .contact-form .MuiInputBase-input::placeholder {
+
+  color: #aaa;
+
+}
+
+
+
+.dark-mode .contact-form .MuiInputLabel-root {
+
+  color: #b78cff;
+
+}
+
+
+
+.dark-mode .contact-form .MuiOutlinedInput-root fieldset {
+
+  border-color: #aaa;
+
+}
+
+
+
+.dark-mode .contact-form .MuiOutlinedInput-root:hover fieldset {
+
+  border-color: #b78cff;
+
+}
+
+
+
+.dark-mode .contact-form .MuiOutlinedInput-root.Mui-focused fieldset {
+
+  border-color: #b78cff;
+
+}
+
+
+
+
+
+.contact-status {
+
+  margin-top: 20px;
+
+  color: #5000ca;
+
+  font-weight: bold;
+
+}
