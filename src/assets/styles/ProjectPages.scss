@@ -1,182 +1,371 @@
 /* ==========================================
+   PROJECT PAGES GENERAL IMAGE SETTINGS
+   ========================================== */
+
+
+img,
+video {
+
+    max-width:100%;
+
+}
+
+
+
+
+
+
+
+.image-caption {
+
+
+    text-align:center;
+
+
+
+    font-size:13px;
+
+
+
+    line-height:1.4;
+
+
+
+    opacity:0.7;
+
+
+
+    margin-top:10px;
+
+
+
+}
+
+
+
+
+
+
+
+
+/* ==========================================
    THESIS PROJECT
    ========================================== */
 
 
-/* ==========================================================
-   THESIS PROJECT IMAGE SETTINGS
-   ========================================================== */
-/* ===========================
-   PHOTO 3 - COMPLETE APPARATUS
-   =========================== */
 
 .thesis-photo3 {
 
+
     width:65%;
-    margin:0 auto;
+
+
+
+    margin:40px auto;
+
+
+
     text-align:center;
 
+
+
 }
+
+
+
+
+
 
 
 .thesis-photo3 img {
 
+
     width:100%;
+
+
+
     height:auto;
+
+
 
     border-radius:12px;
 
+
+
     display:block;
+
+
+
     margin:auto;
+
+
+
+    border:1px solid black;
+
+
 
 }
 
 
 
-/* ===========================
-   PHOTO 1 + PHOTO 2 SIDE BY SIDE
-   =========================== */
+
+
 
 
 .project-images.side {
 
+
     display:flex;
+
+
+
     justify-content:center;
+
+
+
     align-items:flex-start;
+
+
+
     gap:25px;
 
+
+
+    width:100%;
+
+
+
+    margin:40px auto;
+
+
+
 }
+
+
+
+
 
 
 
 .thesis-photo1,
 .thesis-photo2 {
 
+
     width:50%;
+
+
 
     overflow:hidden;
 
+
+
     border-radius:12px;
+
+
+
+    text-align:center;
+
+
 
 }
 
 
 
-/* Controls BOTH side-by-side image heights */
+
+
+
 
 .thesis-photo1 img,
 .thesis-photo2 img {
 
+
     width:100%;
 
-    max-height:175px;   /* <-- Change this value to resize both */
+
+
+    max-height:175px;
+
+
 
     object-fit:contain;
 
+
+
     border-radius:12px;
+
+
 
     display:block;
 
+
+
     border:1px solid black;
 
+
+
 }
+
+
+
+
+
 
 
 
 /* ==========================================
-   THESIS REPORT BUTTON
+   REPORT BUTTON
    ========================================== */
 
 
-/* Center button */
-
 .report-button-container {
+
 
     display:flex;
 
+
+
     justify-content:center;
 
+
+
     align-items:center;
+
+
 
     width:100%;
 
+
+
     margin-top:30px;
+
+
 
 }
 
 
 
-/* Button styling */
+
+
+
 
 .report-button {
 
+
     display:inline-flex;
+
+
 
     justify-content:center;
 
+
+
     align-items:center;
+
+
 
     padding:12px 24px;
 
-    border-radius:8px;
+
+
+    border-radius:25px;
+
+
 
     text-decoration:none;
 
+
+
     cursor:pointer;
+
+
 
     font-size:15px;
 
-    transition:all 0.25s ease;
 
-    background-color:transparent;
+
+    transition:all .25s ease;
+
+
+
+    background:transparent;
+
+
 
     border:1px solid #888;
 
+
+
     color:#888;
+
+
 
 }
 
 
 
-/* Light mode */
+
+
+
 
 .light-mode .report-button {
 
+
     border-color:#888;
+
+
 
     color:#555;
 
-    background-color:transparent;
+
 
 }
 
 
 
-/* Dark mode */
+
+
+
 
 .dark-mode .report-button {
 
+
     border-color:white;
+
+
 
     color:white;
 
-    background-color:transparent;
+
 
 }
 
 
 
-/* Hover effect (both themes) */
+
+
+
 
 .report-button:hover {
 
-    background-color:#5000ca;
+
+    background:#5000ca;
+
+
 
     border-color:#5000ca;
 
+
+
     color:white !important;
 
+
+
 }
+
+
+
+
+
 
 
 
@@ -185,256 +374,246 @@
    ========================================== */
 
 
-/* ===========================
-   TURBINE IMAGES
-   =========================== */
-
-
 .turbine-images {
+
 
     display:flex;
 
+
+
     flex-direction:column;
+
+
 
     align-items:center;
 
-    justify-content:center;
+
 
     margin:40px auto;
 
+
+
 }
 
 
 
-/* Individual image containers */
+
+
+
 
 .turbine-image-container {
 
+
     width:75%;
+
+
 
     margin-bottom:40px;
 
+
+
     text-align:center;
+
+
 
     overflow:hidden;
 
+
+
     border-radius:12px;
+
+
 
 }
 
 
 
-/* Image formatting */
+
+
+
 
 .turbine-image-container img {
 
+
     width:100%;
+
+
 
     height:auto;
 
+
+
     display:block;
+
+
 
     border-radius:12px;
 
+
+
     border:1px solid black;
 
-}
 
-
-
-/* Caption formatting */
-
-.turbine-image-container .image-caption {
-
-    text-align:center;
-
-    font-size:13px;
-
-    line-height:1.4;
-
-    opacity:0.7;
-
-    margin-top:10px;
 
 }
 
 
 
-/* ===========================
-   TECHNICAL DETAILS LIST
-   =========================== */
 
 
-.turbine-details-list {
-
-    color:inherit;
-
-    margin-top:15px;
-
-    margin-bottom:25px;
-
-}
-
-
-
-.turbine-details-list li {
-
-    color:inherit;
-
-    margin-bottom:8px;
-
-    line-height:1.5;
-
-}
-
-
-
-/* ===========================
-   TURBINE VIDEO
-   =========================== */
 
 
 .turbine-video {
 
+
     display:flex;
+
+
 
     justify-content:center;
 
+
+
     align-items:center;
+
+
 
     margin:40px auto;
 
+
+
 }
+
+
+
+
 
 
 
 .turbine-video video {
 
+
     width:75%;
+
+
 
     max-width:900px;
 
-    height:auto;
+
 
     border-radius:12px;
 
+
+
 }
 
 
 
-/* ===========================
-   DARK MODE FIXES
-   =========================== */
 
 
-/* Ensure text follows theme colours */
+
+
+.turbine-details-list {
+
+
+    margin-top:15px;
+
+
+
+    margin-bottom:25px;
+
+
+
+}
+
+
+
+
+
+
+
+.turbine-details-list li {
+
+
+    margin-bottom:8px;
+
+
+
+    line-height:1.5;
+
+
+
+}
+
+
+
+
+
+
 
 .dark-mode .turbine-details-list,
-
 .dark-mode .turbine-details-list li {
 
-    color:rgb(255, 255, 255);
+
+    color:white;
+
+
 
 }
 
 
 
-/* ===========================
-   RESPONSIVE DESIGN
-   =========================== */
-
-
-@media (max-width:900px) {
-
-
-    .turbine-image-container {
-
-        width:80%;
-
-    }
-
-
-    .turbine-video video {
-
-        width:80%;
-
-    }
-
-}
 
 
 
-@media (max-width:600px) {
 
-
-    .turbine-image-container {
-
-        width:95%;
-
-    }
-
-
-    .turbine-video video {
-
-        width:95%;
-
-    }
-
-}
 
 /* ==========================================
-   SOLAR CELL PROJECT
+   SOLAR PROJECT
    ========================================== */
-
-
-/* ===========================
-   SOLAR MAIN IMAGE
-   =========================== */
 
 
 .solar-image-container {
 
+
     width:75%;
+
+
 
     margin:40px auto;
 
+
+
     text-align:center;
 
+
+
 }
+
+
+
+
 
 
 
 .solar-image-container img {
 
+
     width:100%;
+
+
 
     height:auto;
 
-    display:block;
 
-    margin:auto;
 
     border-radius:12px;
 
+
+
     border:1px solid black;
 
-}
 
-
-
-/* Caption */
-
-.solar-image-container .image-caption {
-
-    text-align:center;
-
-    font-size:13px;
-
-    line-height:1.4;
-
-    opacity:0.7;
-
-    margin-top:10px;
 
 }
 
@@ -443,83 +622,50 @@
 
 
 
-
-/* ===========================
-   SOLAR SIDE-BY-SIDE IMAGES
-   =========================== */
-
-
-/* Container holding both images */
-
-.project-images.side {
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:flex-start;
-
-    gap:25px;
-
-    width:100%;
-
-    margin:40px auto;
-
-}
-
-
-
-/* Individual image containers */
 
 .solar-photo2,
 .solar-photo3 {
 
+
     width:50%;
 
+
+
     text-align:center;
+
+
 
 }
 
 
 
-/* Actual image */
+
+
+
 
 .solar-photo2 img,
 .solar-photo3 img {
 
+
     height:400px;
+
+
 
     width:auto;
 
+
+
     max-width:100%;
 
-    display:inline-block;
+
 
     border-radius:12px;
 
+
+
     border:1px solid black;
 
-}
 
-
-
-
-
-
-/* Captions */
-
-.solar-photo2 .image-caption,
-.solar-photo3 .image-caption {
-
-    text-align:center;
-
-    font-size:13px;
-
-    line-height:1.4;
-
-    opacity:0.7;
-
-    margin-top:10px;
 
 }
 
@@ -527,31 +673,18 @@
 
 
 
-
-
-/* ===========================
-   TECHNICAL DETAILS LIST
-   =========================== */
-
-
-.solar-details-list {
-
-    color:inherit;
-
-    margin-top:15px;
-
-    margin-bottom:25px;
-
-}
 
 
 .solar-details-list li {
 
-    color:inherit;
 
     margin-bottom:8px;
 
+
+
     line-height:1.5;
+
+
 
 }
 
@@ -559,55 +692,31 @@
 
 
 
-
-
-/* ===========================
-   DARK MODE FIXES
-   =========================== */
 
 
 .dark-mode .solar-details-list,
 .dark-mode .solar-details-list li {
 
+
     color:white;
 
+
+
 }
+
+
+
+
+
 
 
 .dark-mode .solar-image-container img,
 .dark-mode .solar-photo2 img,
 .dark-mode .solar-photo3 img {
 
+
     border-color:white;
 
-}
-
-
-
-
-
-
-
-/* ===========================
-   RESPONSIVE DESIGN
-   =========================== */
-
-
-@media (max-width:900px) {
-
-
-    .solar-image-container {
-
-        width:85%;
-
-    }
-
-
-    .project-images.side {
-
-        width:90%;
-
-    }
 
 
 }
@@ -616,78 +725,63 @@
 
 
 
-@media (max-width:600px) {
 
 
-    .solar-image-container {
-
-        width:95%;
-
-    }
-
-
-
-    .project-images.side {
-
-        width:95%;
-
-        flex-direction:column;
-
-        align-items:center;
-
-    }
-
-
-
-    .solar-photo2,
-    .solar-photo3 {
-
-        width:100%;
-
-    }
-
-
-}
 
 /* ==========================================
    BATTERY ENCLOSURE PROJECT
    ========================================== */
 
 
-/* ===========================
-   MAIN BATTERY IMAGE (PHOTO 1)
-   =========================== */
-
-
 .battery-image-container {
+
 
     width:75%;
 
+
+
     margin:40px auto;
+
+
 
     text-align:center;
 
-    overflow:hidden;
 
-    border-radius:12px;
 
 }
+
+
+
+
 
 
 
 .battery-image-container img {
 
+
     width:80%;
+
+
 
     height:auto;
 
+
+
+    margin:auto;
+
+
+
     display:block;
 
-    margin:0 auto;
+
 
     border-radius:12px;
 
+
+
     border:1px solid black;
+
+
 
 }
 
@@ -695,97 +789,68 @@
 
 
 
-/* ===========================
-   SIMULATION IMAGE (PHOTO 2)
-   =========================== */
 
 
 .battery-simulation-image {
 
+
     width:60%;
+
+
 
     margin:40px auto;
 
+
+
     text-align:center;
 
-    overflow:hidden;
 
-    border-radius:12px;
 
 }
+
+
+
+
 
 
 
 .battery-simulation-image img {
 
+
     width:100%;
+
+
 
     height:auto;
 
-    display:block;
 
-    margin:0 auto;
 
     border-radius:12px;
 
+
+
     border:1px solid black;
 
-}
 
-
-
-
-
-/* ===========================
-   IMAGE CAPTIONS
-   =========================== */
-
-
-.battery-image-container .image-caption,
-.battery-simulation-image .image-caption {
-
-    text-align:center;
-
-    font-size:13px;
-
-    line-height:1.4;
-
-    opacity:0.7;
-
-    margin-top:10px;
 
 }
 
 
 
 
-
-
-
-/* ===========================
-   TECHNICAL DETAILS LIST
-   =========================== */
-
-
-.battery-details-list {
-
-    color:inherit;
-
-    margin-top:15px;
-
-    margin-bottom:25px;
-
-}
 
 
 
 .battery-details-list li {
 
-    color:inherit;
 
     margin-bottom:8px;
 
+
+
     line-height:1.5;
+
+
 
 }
 
@@ -793,26 +858,31 @@
 
 
 
-
-
-/* ===========================
-   DARK MODE FIXES
-   =========================== */
 
 
 .dark-mode .battery-details-list,
 .dark-mode .battery-details-list li {
 
+
     color:white;
 
+
+
 }
+
+
+
+
 
 
 
 .dark-mode .battery-image-container img,
 .dark-mode .battery-simulation-image img {
 
+
     border-color:white;
+
+
 
 }
 
@@ -822,26 +892,72 @@
 
 
 
-/* ===========================
-   RESPONSIVE DESIGN
-   =========================== */
+
+/* ==========================================
+   TABLET
+   ========================================== */
 
 
 @media(max-width:900px){
 
 
-    .battery-image-container {
+
+    .thesis-photo3,
+    .turbine-image-container,
+    .solar-image-container {
+
 
         width:85%;
 
+
+
     }
+
+
+
+
+
+
+
+    .turbine-video video {
+
+
+        width:85%;
+
+
+
+    }
+
+
+
+
+
+
+
+    .battery-image-container {
+
+
+        width:85%;
+
+
+
+    }
+
+
+
+
+
 
 
     .battery-simulation-image {
 
+
         width:75%;
 
+
+
     }
+
 
 
 }
@@ -852,15 +968,188 @@
 
 
 
-@media(max-width:500px){
+
+/* ==========================================
+   MOBILE
+   ========================================== */
 
 
+@media(max-width:600px){
+
+
+
+    .project-images.side {
+
+
+        flex-direction:column;
+
+
+
+        align-items:center;
+
+
+
+        gap:35px;
+
+
+
+        width:95%;
+
+
+
+    }
+
+
+
+
+
+
+
+    .thesis-photo1,
+    .thesis-photo2,
+    .solar-photo2,
+    .solar-photo3 {
+
+
+        width:100%;
+
+
+
+    }
+
+
+
+
+
+
+
+    .thesis-photo1 img,
+    .thesis-photo2 img {
+
+
+        max-height:none;
+
+
+
+    }
+
+
+
+
+
+
+
+    .solar-photo2 img,
+    .solar-photo3 img {
+
+
+        height:auto;
+
+
+
+        width:100%;
+
+
+
+    }
+
+
+
+
+
+
+
+    .thesis-photo3,
+    .turbine-image-container,
+    .solar-image-container,
     .battery-image-container,
     .battery-simulation-image {
 
-        width:75%;
+
+        width:95%;
+
+
 
     }
+
+
+
+
+
+
+
+    .turbine-video video {
+
+
+        width:95%;
+
+
+
+    }
+
+
+
+
+
+
+
+    .report-button {
+
+
+        width:90%;
+
+
+
+        padding:12px;
+
+
+
+    }
+
+
+
+}
+
+
+
+
+
+
+
+
+/* ==========================================
+   SMALL IPHONES
+   ========================================== */
+
+
+@media(max-width:420px){
+
+
+
+    .image-caption {
+
+
+        font-size:12px;
+
+
+
+    }
+
+
+
+
+
+
+
+    .report-button {
+
+
+        font-size:14px;
+
+
+
+    }
+
 
 
 }

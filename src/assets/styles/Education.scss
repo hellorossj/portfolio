@@ -1,114 +1,238 @@
+/* ==========================================
+   EDUCATION SECTION
+   ========================================== */
+
+
 .education-section {
 
-    height: 200vh;
 
-    position: relative;
+    height:200vh;
+
+
+    position:relative;
+
 
 }
 
+
+
+
+
+
+
+/* ==========================================
+   STICKY BACKGROUND SECTION
+   ========================================== */
 
 
 .education-sticky {
 
-    height: 100vh;
 
-    width: 100%;
+    height:100vh;
 
-    position: sticky;
 
-    top: 0;
+    width:100%;
 
-    overflow: hidden;
 
-    display: flex;
+    position:sticky;
 
-    align-items: center;
 
-    justify-content: center;
+    top:0;
+
+
+    overflow:hidden;
+
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    justify-content:center;
+
+
 
 }
 
+
+
+
+
+
+
+/* ==========================================
+   BACKGROUND IMAGE
+   ========================================== */
 
 
 .education-image {
 
-    position: absolute;
 
-    inset: 0;
+    position:absolute;
 
-    background-size: cover;
 
-    background-position: center;
+    inset:0;
 
-    background-repeat: no-repeat;
+
+
+    background-size:cover;
+
+
+    background-position:center;
+
+
+    background-repeat:no-repeat;
+
 
 }
 
+
+
+
+
+
+
+/* ==========================================
+   OVERLAY
+   ========================================== */
 
 
 .education-overlay {
 
-    position: absolute;
 
-    inset: 0;
+    position:absolute;
+
+
+    inset:0;
+
+
+
+    background:rgba(0,0,0,0.75);
+
 
 }
 
+
+
+
+
+
+
+
+/* ==========================================
+   TEXT CONTENT
+   ========================================== */
 
 
 .education-text {
 
-    position: relative;
 
-    z-index: 2;
+    position:relative;
 
-    width: 75%;
 
-    max-width: 950px;
 
-    text-align: left;
+    z-index:2;
+
+
+
+    width:75%;
+
+
+
+    max-width:950px;
+
+
+
+    text-align:left;
+
+
 
 }
+
+
+
+
+
 
 
 
 .education-body-text {
 
-    margin: 0;
 
-    color: #c1c0c0;
+    margin:0;
 
-    font-size: 1.4rem;
 
-    line-height: 1.9;
 
-    letter-spacing: 0.25px;
+    color:#c1c0c0;
 
-    font-weight: 1000;
 
-    font-family: 'Poppins', sans-serif;
+
+    font-size:1.4rem;
+
+
+
+    line-height:1.9;
+
+
+
+    letter-spacing:0.25px;
+
+
+
+    font-weight:700;
+
+
+
+    font-family:'Poppins',sans-serif;
+
+
 
 }
 
 
 
-/* Highlighted words */
+
+
+
+
+
+/* ==========================================
+   HIGHLIGHTED WORDS
+   ========================================== */
+
 
 .education-highlight {
 
-    display: inline-block;
 
-    color: white;
+    display:inline-block;
 
-    font-size: 1.2em;
 
-    font-weight: 900;
 
-    letter-spacing: 0.2px;
+    color:white;
 
-    transition: color 0.25s ease;
 
-    cursor: default;
+
+    font-size:1.2em;
+
+
+
+    font-weight:800;
+
+
+
+    letter-spacing:0.2px;
+
+
+
+    transition:color 0.25s ease;
+
+
+
+    cursor:default;
+
+
 
 }
 
@@ -116,38 +240,46 @@
 
 
 
-/* Dark image overlay */
-
-.education-overlay {
-
-    background: rgba(0,0,0,0.75);
-
-}
 
 
 
-/* Light mode support */
+/* ==========================================
+   LIGHT MODE
+   ========================================== */
+
 
 .light-mode {
 
 
     .education-body-text {
 
-        color: #292929;
+
+        color:#292929;
+
 
     }
+
+
+
 
 
     .education-highlight {
 
-        color: black;
+
+        color:black;
+
 
     }
 
 
+
+
+
     .education-overlay {
 
-        background: rgba(255,255,255,0.65);
+
+        background:rgba(255,255,255,0.65);
+
 
     }
 
@@ -156,61 +288,219 @@
 
 
 
-@media screen {
 
 
-    @media(max-width:768px){
 
 
-        .education-section {
 
-            height:120vh;
-
-        }
-
-
-        .education-text {
-
-            width:88%;
-
-        }
+/* ==========================================
+   TABLET
+   ========================================== */
 
 
-        .education-body-text {
-
-            font-size:1.1rem;
-
-            line-height:1.7;
-
-        }
+@media(max-width:900px){
 
 
-        .education-highlight {
+    .education-section {
 
-            font-size:1.12em;
 
-        }
+        height:150vh;
 
 
     }
 
 
 
-    @media(max-width:567px){
 
 
-        .education-text {
-
-            width:92%;
-
-        }
+    .education-text {
 
 
-        .education-body-text {
+        width:85%;
 
-            font-size:1rem;
 
-        }
+    }
+
+
+
+
+
+    .education-body-text {
+
+
+        font-size:1.2rem;
+
+
+        line-height:1.75;
+
+
+    }
+
+
+}
+
+
+
+
+
+
+
+
+/* ==========================================
+   MOBILE
+   ========================================== */
+
+
+@media(max-width:768px){
+
+
+    .education-section {
+
+
+        height:130vh;
+
+
+    }
+
+
+
+
+
+    .education-sticky {
+
+
+        height:100svh;
+
+
+    }
+
+
+
+
+
+
+    .education-text {
+
+
+        width:88%;
+
+
+        max-width:none;
+
+
+
+        text-align:left;
+
+
+    }
+
+
+
+
+
+
+    .education-body-text {
+
+
+        font-size:1.05rem;
+
+
+
+        line-height:1.65;
+
+
+
+        letter-spacing:0.15px;
+
+
+
+        font-weight:600;
+
+
+    }
+
+
+
+
+
+
+    .education-highlight {
+
+
+        font-size:1.1em;
+
+
+
+        font-weight:800;
+
+
+    }
+
+
+}
+
+
+
+
+
+
+
+
+/* ==========================================
+   SMALL IPHONES
+   ========================================== */
+
+
+@media(max-width:420px){
+
+
+    .education-section {
+
+
+        height:120vh;
+
+
+    }
+
+
+
+
+
+
+    .education-text {
+
+
+        width:90%;
+
+
+    }
+
+
+
+
+
+
+    .education-body-text {
+
+
+        font-size:0.95rem;
+
+
+
+        line-height:1.55;
+
+
+    }
+
+
+
+
+
+
+    .education-highlight {
+
+
+        font-size:1.08em;
 
 
     }

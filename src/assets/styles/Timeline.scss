@@ -1,54 +1,511 @@
+/* ==========================================
+   TIMELINE
+   ========================================== */
+
+
+/* Timeline text */
+
+
 .vertical-timeline span {
-    color: white;
-    font-family: 'Courier Prime', monospace;
+
+
+    color:white;
+
+
+    font-family:'Courier Prime', monospace;
+
+
 }
+
+
+
+
 
 .vertical-timeline p {
-    color: rgb(39, 40, 34);
+
+
+    color:rgb(39,40,34);
+
+
 }
+
+
+
+
 
 .vertical-timeline-element p {
-    color: rgb(39, 40, 34);
+
+
+    color:rgb(39,40,34);
+
+
 }
+
+
+
+
 
 .vertical-timeline-element h3 {
-    color: rgb(39, 40, 34);
+
+
+    color:rgb(39,40,34);
+
+
 }
+
+
+
+
 
 .vertical-timeline-element h4 {
-    color: rgb(39, 40, 34);
+
+
+    color:rgb(39,40,34);
+
+
 }
+
+
+
+
 
 .vertical-timeline-element span {
-    color: rgb(39, 40, 34);
+
+
+    color:rgb(39,40,34);
+
+
 }
+
+
+
+
+
+
+
+/* Timeline dates */
+
 
 .vertical-timeline-element .vertical-timeline-element-date {
-    color: white;
+
+
+    color:white;
+
+
+    font-family:'Courier Prime', monospace;
+
+
 }
+
+
+
+
+
+
+
+
+/* Icons */
+
 
 .svg-inline--fa {
-    color: white;
+
+
+    color:white;
+
+
 }
+
+
+
+
 
 .vertical-timeline-element-icon {
-    display: flex !important;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+
+
+    display:flex !important;
+
+
+    justify-content:center;
+
+
+    align-items:center;
+
+
+    overflow:hidden;
+
+
 }
+
+
+
+
+
+
 
 .vertical-timeline-element-icon img.timeline-logo {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: contain !important;
+
+
+    width:100% !important;
+
+
+    height:100% !important;
+
+
+    object-fit:contain !important;
+
+
 }
 
 
-@media screen and (max-width: 1170px) {
+
+
+
+
+
+
+/* ==========================================
+   DESKTOP DATE FIX
+   ========================================== */
+
+
+@media(max-width:1170px){
+
+
     .vertical-timeline-element .vertical-timeline-element-date {
-        color: rgb(39, 40, 34);
+
+
+        color:rgb(39,40,34);
+
+
     }
 
-    
+
+}
+
+
+
+
+
+
+
+
+/* ==========================================
+   TABLET
+   ========================================== */
+
+
+@media(max-width:900px){
+
+
+
+    .vertical-timeline {
+
+
+        width:100% !important;
+
+
+    }
+
+
+
+
+
+
+    .vertical-timeline-element-content {
+
+
+        padding:1.5em !important;
+
+
+    }
+
+
+
+
+
+
+    .vertical-timeline-element-content h3 {
+
+
+        font-size:1.2rem;
+
+
+    }
+
+
+
+
+
+
+    .vertical-timeline-element-content h4 {
+
+
+        font-size:1rem;
+
+
+    }
+
+
+
+}
+
+
+
+
+
+
+
+
+/* ==========================================
+   MOBILE
+   ========================================== */
+
+
+@media(max-width:768px){
+
+
+
+    .vertical-timeline {
+
+
+        width:100% !important;
+
+
+        padding:0 !important;
+
+
+    }
+
+
+
+
+
+
+    /* Force single column */
+
+    .vertical-timeline::before {
+
+
+        left:18px !important;
+
+
+    }
+
+
+
+
+
+
+    .vertical-timeline-element {
+
+
+        margin:2em 0 !important;
+
+
+    }
+
+
+
+
+
+
+    .vertical-timeline-element-icon {
+
+
+        width:40px !important;
+
+
+        height:40px !important;
+
+
+        left:-2px !important;
+
+
+    }
+
+
+
+
+
+
+
+    .vertical-timeline-element-content {
+
+
+        margin-left:55px !important;
+
+
+        width:calc(100% - 55px) !important;
+
+
+        padding:1.2em !important;
+
+
+    }
+
+
+
+
+
+
+
+    .vertical-timeline-element-content-arrow {
+
+
+        display:none !important;
+
+
+    }
+
+
+
+
+
+
+
+    .vertical-timeline-element-content h3 {
+
+
+        font-size:1.1rem;
+
+
+        line-height:1.3;
+
+
+    }
+
+
+
+
+
+
+
+    .vertical-timeline-element-content h4 {
+
+
+        font-size:0.95rem;
+
+
+    }
+
+
+
+
+
+
+
+    .vertical-timeline-element-content p {
+
+
+        font-size:0.95rem;
+
+
+        line-height:1.5;
+
+
+    }
+
+
+
+
+
+
+
+    .vertical-timeline-element .vertical-timeline-element-date {
+
+
+        display:block !important;
+
+
+        margin-top:10px !important;
+
+
+        color:rgb(39,40,34) !important;
+
+
+        font-size:0.85rem;
+
+
+    }
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+/* ==========================================
+   SMALL IPHONES
+   ========================================== */
+
+
+@media(max-width:420px){
+
+
+
+    .vertical-timeline-element-content {
+
+
+        margin-left:45px !important;
+
+
+        width:calc(100% - 45px) !important;
+
+
+        padding:1em !important;
+
+
+    }
+
+
+
+
+
+
+    .vertical-timeline-element-icon {
+
+
+        width:35px !important;
+
+
+        height:35px !important;
+
+
+    }
+
+
+
+
+
+
+    .vertical-timeline-element-content h3 {
+
+
+        font-size:1rem;
+
+
+    }
+
+
+
+
+
+
+    .vertical-timeline-element-content p {
+
+
+        font-size:0.9rem;
+
+
+    }
+
+
+
 }

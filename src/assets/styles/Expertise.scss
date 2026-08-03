@@ -1,97 +1,568 @@
+/* ==========================================
+   EXPERTISE / SKILLS SECTION
+   ========================================== */
+
+
 .skills-container {
-    padding: 5% 10%;
-    display: flex;
-    flex-direction: column;
-    text-align: left;
+
+
+    padding:5% 10%;
+
+
+    display:flex;
+
+
+    flex-direction:column;
+
+
+    text-align:left;
+
+
+
+    box-sizing:border-box;
+
+
+
+    width:100%;
+
+
 
     svg {
-        color: white;
+
+
+        color:white;
+
+
     }
+
+
 }
-  
+
+
+
+
+
+
+
+
+/* ==========================================
+   SKILLS GRID
+   ========================================== */
+
+
 .skills-container .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 50px;
+
+
+    display:grid;
+
+
+
+    grid-template-columns:repeat(3,1fr);
+
+
+
+    gap:50px;
+
+
+
+    width:100%;
+
+
+
 }
-  
+
+
+
+
+
+
+
+
+/* ==========================================
+   INDIVIDUAL SKILL
+   ========================================== */
+
+
 .skills-container .skills-grid .skill {
-    align-items: center;
-    text-align: left;
+
+
+    align-items:center;
+
+
+
+    text-align:left;
+
+
+
+    min-width:0;
+
+
+
 }
-  
+
+
+
+
+
+
+
+
+/* ==========================================
+   CHIP STYLE
+   ========================================== */
+
+
 .chip {
-    color: rgb(39, 40, 34) !important;
-    background-color: white !important;
-    font-size: 0.8rem !important;
-    height: 25px !important;
-    cursor: default;
-    transition: all 0.25s ease !important;
+
+
+    color:rgb(39,40,34) !important;
+
+
+
+    background-color:white !important;
+
+
+
+    font-size:0.8rem !important;
+
+
+
+    height:25px !important;
+
+
+
+    cursor:default;
+
+
+
+    transition:all 0.25s ease !important;
+
+
+
+    margin-bottom:8px;
+
+
+
+    max-width:100%;
+
+
 
     span {
-        font-family: 'Courier Prime', monospace;
-        color: rgb(39, 40, 34);
-        transition: color 0.25s ease;
+
+
+        font-family:'Courier Prime',monospace;
+
+
+
+        color:rgb(39,40,34);
+
+
+
+        transition:color 0.25s ease;
+
+
+
     }
+
+
+
+
 
     svg {
-        height: 15px !important;
+
+
+        height:15px !important;
+
+
     }
+
+
+
+
 
     &:hover {
-        background-color: #5000ca !important;
-        transform: translateY(-2px);
+
+
+        background-color:#5000ca !important;
+
+
+
+        transform:translateY(-2px);
+
+
+
     }
+
+
+
+
 
     &:hover span {
-        color: white !important;
+
+
+        color:white !important;
+
+
     }
+
+
 }
+
+
+
+
+
+
+
+
+/* ==========================================
+   CHIP GROUPS
+   ========================================== */
+
 
 .flex-chips {
-    line-height: 2;
-    margin: 0.5;
 
-    .chip-title {
-        color: white;
-        padding-right: 10px;
-    }
+
+    line-height:2;
+
+
+
+    margin:0.5;
+
+
+
+    display:flex;
+
+
+
+    flex-wrap:wrap;
+
+
+
+    align-items:center;
+
+
+
+    gap:8px;
+
+
+
 }
+
+
+
+
+
+.flex-chips .chip-title {
+
+
+    color:white;
+
+
+
+    padding-right:10px;
+
+
+
+    white-space:nowrap;
+
+
+
+}
+
+
+
+
+
+
 
 .flex-chips .MuiChip-root {
-    margin-right: 0.5em;
+
+
+    margin-right:0.5em;
+
+
+
 }
+
+
+
+
+
+
 
 .flex-chips .MuiChip-outlined {
-    background-color: #e0e0e0;
-    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-        monospace;
+
+
+    background-color:#e0e0e0;
+
+
+
+    font-family:source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+
+
+
 }
+
+
+
+
+
+
 
 .flex-chips .MuiChip-outlined span {
-    color: rgb(39, 40, 34);
+
+
+    color:rgb(39,40,34);
+
+
 }
 
-@media screen {
-    @media (max-width: 768px) {
-        .skills-container {
-            display: block;
-            padding-left: 5%;
-            padding-right: 5%;
-        }
-    
-        .skills-container .skills-grid {
-            display: initial;
-        }
-        
-        .skills-container .skills-grid .skill {
-            padding-bottom: 5%;
-        }
+
+
+
+
+
+
+
+/* ==========================================
+   LIGHT MODE
+   ========================================== */
+
+
+.light-mode {
+
+
+    .skills-container svg {
+
+
+        color:#0d1116;
+
+
     }
 
-    @media (max-width: 567px) {
-        .skills {
-            font-size: 12px;
-        }
+
+
+
+
+    .flex-chips .chip-title {
+
+
+        color:#0d1116;
+
+
     }
+
+
+}
+
+
+
+
+
+
+
+
+/* ==========================================
+   TABLET
+   ========================================== */
+
+
+@media(max-width:1000px){
+
+
+    .skills-container {
+
+
+        padding:6% 7%;
+
+
+    }
+
+
+
+
+
+    .skills-container .skills-grid {
+
+
+        grid-template-columns:repeat(2,1fr);
+
+
+
+        gap:35px;
+
+
+
+    }
+
+
+}
+
+
+
+
+
+
+
+
+/* ==========================================
+   MOBILE
+   ========================================== */
+
+
+@media(max-width:768px){
+
+
+    .skills-container {
+
+
+        padding:10% 5%;
+
+
+
+        display:block;
+
+
+
+    }
+
+
+
+
+
+    .skills-container .skills-grid {
+
+
+        grid-template-columns:1fr;
+
+
+
+        gap:35px;
+
+
+
+    }
+
+
+
+
+
+    .skills-container .skills-grid .skill {
+
+
+        padding-bottom:10px;
+
+
+
+    }
+
+
+
+
+
+
+
+    .flex-chips {
+
+
+        line-height:1.8;
+
+
+
+        gap:5px;
+
+
+
+    }
+
+
+
+
+
+    .chip {
+
+
+        font-size:0.75rem !important;
+
+
+
+        height:24px !important;
+
+
+
+    }
+
+
+}
+
+
+
+
+
+
+
+
+/* ==========================================
+   SMALL IPHONES
+   ========================================== */
+
+
+@media(max-width:420px){
+
+
+    .skills-container {
+
+
+        padding:12% 5%;
+
+
+    }
+
+
+
+
+
+    .skills-container .skills-grid {
+
+
+        gap:25px;
+
+
+    }
+
+
+
+
+
+    .chip {
+
+
+        font-size:0.7rem !important;
+
+
+
+        height:22px !important;
+
+
+    }
+
+
+
+
+
+    .flex-chips .chip-title {
+
+
+        width:100%;
+
+
+
+        margin-bottom:5px;
+
+
+
+    }
+
+
 }

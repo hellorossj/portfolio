@@ -1,127 +1,284 @@
+/* ==========================================
+   CONTACT SECTION
+   ========================================== */
+
+
 .contact_wrapper svg {
-  font-size: 1em;
-  vertical-align: middle;
-  margin-right: 5px;
+
+
+    font-size:1em;
+
+
+
+    vertical-align:middle;
+
+
+
+    margin-right:5px;
+
+
+
 }
 
+
+
+
+
+
+
+
+/* ==========================================
+   FORM BUTTON
+   ========================================== */
 
 
 .contact-form {
 
-  button {
 
-    float: right;
-
-    background-color: rgba(255, 255, 255, 0);
-
-    color: #050f0b;
-
-    margin-top: 10px;
-
-    border: 1px solid #777;
-
-  }
+    width:100%;
 
 
-  button:hover {
 
-    background-color: #5000ca;
+    button {
 
-    color: white;
 
-    border-color: #5000ca;
+        float:right;
 
-  }
+
+
+        background-color:rgba(255,255,255,0);
+
+
+
+        color:#050f0b;
+
+
+
+        margin-top:10px;
+
+
+
+        border:1px solid #777;
+
+
+
+        border-radius:25px;
+
+
+
+        padding:8px 20px;
+
+
+
+        transition:all .25s ease;
+
+
+
+    }
+
+
+
+
+
+
+    button:hover {
+
+
+        background-color:#5000ca;
+
+
+
+        color:white;
+
+
+
+        border-color:#5000ca;
+
+
+
+    }
+
+
 
 }
+
+
+
+
+
+
 
 
 /* Dark mode button */
+
+
 .dark-mode .contact-form button {
 
-  background-color: transparent;
 
-  color: #aaa;
+    background-color:transparent;
 
-  border: 1px solid #aaa;
+
+
+    color:#aaa;
+
+
+
+    border:1px solid #aaa;
+
+
 
 }
 
 
-/* Dark mode hover */
+
+
+
+
+
 .dark-mode .contact-form button:hover {
 
-  background-color: #5000ca;
 
-  color: white;
+    background-color:#5000ca;
 
-  border-color: #5000ca;
+
+
+    color:white;
+
+
+
+    border-color:#5000ca;
+
+
 
 }
 
 
 
-/* spacing between fields */
+
+
+
+
+
+/* ==========================================
+   INPUT FIELDS
+   ========================================== */
+
 
 .contact-form .MuiTextField-root {
 
-  margin-bottom: 20px;
+
+    margin-bottom:20px;
+
+
+
+    width:100%;
+
+
 
 }
 
 
 
-/* field background */
+
+
+
+
 
 .contact-form .MuiOutlinedInput-root {
 
-  background-color: rgba(255, 255, 255, 0);
+
+    background-color:rgba(255,255,255,0);
 
 
-  fieldset {
 
-    border-color: #777;
-
-  }
+    fieldset {
 
 
-  &:hover fieldset {
-
-    border-color: #5000ca;
-
-  }
+        border-color:#777;
 
 
-  &.Mui-focused fieldset {
 
-    border-color: #5000ca;
+    }
 
-    border-width: 2px;
 
-  }
+
+
+
+
+    &:hover fieldset {
+
+
+        border-color:#5000ca;
+
+
+
+    }
+
+
+
+
+
+
+    &.Mui-focused fieldset {
+
+
+        border-color:#5000ca;
+
+
+
+        border-width:2px;
+
+
+
+    }
+
+
 
 }
 
 
-/* typed text */
+
+
+
+
+
+
+/* Typed text */
+
 
 .contact-form .MuiInputBase-input {
 
-  color: #050f0b;
 
-  font-size: 1.1rem;
+    color:#050f0b;
+
+
+
+    font-size:1.1rem;
+
+
 
 }
 
 
 
-/* placeholder inside box */
+
+
+
+
+
+/* Placeholder */
+
 
 .contact-form .MuiInputBase-input::placeholder {
 
-  color: #777;
 
-  opacity: 1;
+    color:#777;
+
+
+
+    opacity:1;
+
+
 
 }
 
@@ -129,17 +286,30 @@
 
 
 
-/* floating labels */
+
+
+
+/* Floating labels */
+
 
 .contact-form .MuiInputLabel-root {
 
-  color: #5000ca;
 
-  font-size: 1rem;
+    color:#5000ca;
 
-  transform: translate(14px, -12px) scale(0.85);
 
-  background: transparent;
+
+    font-size:1rem;
+
+
+
+    transform:translate(14px,-12px) scale(0.85);
+
+
+
+    background:transparent;
+
+
 
 }
 
@@ -147,39 +317,77 @@
 
 
 
-/* layout */
+
+
+
+/* ==========================================
+   FORM LAYOUT
+   ========================================== */
+
 
 .form-flex {
 
-  display: flex;
 
-  gap: 30px;
+    display:flex;
 
-  padding-bottom: 10px;
+
+
+    gap:30px;
+
+
+
+    padding-bottom:10px;
+
+
+
+    width:100%;
+
+
 
 }
+
+
+
+
 
 
 
 .form-flex .MuiFormControl-root {
 
-  width: 100%;
+
+    width:100%;
+
+
 
 }
+
+
+
+
 
 
 
 form {
 
-  width: 100% !important;
+
+    width:100% !important;
+
+
 
 }
+
+
+
+
 
 
 
 .body-form {
 
-  width: 100% !important;
+
+    width:100% !important;
+
+
 
 }
 
@@ -187,59 +395,110 @@ form {
 
 
 
-/* DARK MODE */
+
+
+
+/* ==========================================
+   DARK MODE INPUTS
+   ========================================== */
+
 
 .dark-mode .contact-form .MuiOutlinedInput-root {
 
-  background-color: rgba(0, 0, 0, 0);
+
+    background-color:rgba(0,0,0,0);
+
+
 
 }
+
+
+
+
 
 
 
 .dark-mode .contact-form .MuiInputBase-input {
 
-  color: white;
+
+    color:white;
+
+
 
 }
+
+
+
+
 
 
 
 .dark-mode .contact-form .MuiInputBase-input::placeholder {
 
-  color: #aaa;
+
+    color:#aaa;
+
+
 
 }
+
+
+
+
 
 
 
 .dark-mode .contact-form .MuiInputLabel-root {
 
-  color: #b78cff;
+
+    color:#b78cff;
+
+
 
 }
+
+
+
+
 
 
 
 .dark-mode .contact-form .MuiOutlinedInput-root fieldset {
 
-  border-color: #aaa;
+
+    border-color:#aaa;
+
+
 
 }
+
+
+
+
 
 
 
 .dark-mode .contact-form .MuiOutlinedInput-root:hover fieldset {
 
-  border-color: #b78cff;
+
+    border-color:#b78cff;
+
+
 
 }
+
+
+
+
 
 
 
 .dark-mode .contact-form .MuiOutlinedInput-root.Mui-focused fieldset {
 
-  border-color: #b78cff;
+
+    border-color:#b78cff;
+
+
 
 }
 
@@ -247,12 +506,189 @@ form {
 
 
 
+
+
+
+/* ==========================================
+   STATUS MESSAGE
+   ========================================== */
+
+
 .contact-status {
 
-  margin-top: 20px;
 
-  color: #5000ca;
+    margin-top:20px;
 
-  font-weight: bold;
+
+
+    color:#5000ca;
+
+
+
+    font-weight:bold;
+
+
+
+}
+
+
+
+
+
+
+
+
+/* ==========================================
+   TABLET
+   ========================================== */
+
+
+@media(max-width:900px){
+
+
+
+    .form-flex {
+
+
+        gap:20px;
+
+
+
+    }
+
+
+
+}
+
+
+
+
+
+
+
+
+/* ==========================================
+   MOBILE
+   ========================================== */
+
+
+@media(max-width:768px){
+
+
+
+    .form-flex {
+
+
+        flex-direction:column;
+
+
+
+        gap:0;
+
+
+
+    }
+
+
+
+
+
+
+    .contact-form button {
+
+
+        float:none;
+
+
+
+        width:100%;
+
+
+
+        margin-top:15px;
+
+
+
+    }
+
+
+
+
+
+
+
+    .contact-form .MuiInputBase-input {
+
+
+        font-size:1rem;
+
+
+
+    }
+
+
+
+
+
+
+
+    .contact-form .MuiInputLabel-root {
+
+
+        font-size:0.9rem;
+
+
+
+    }
+
+
+
+}
+
+
+
+
+
+
+
+
+/* ==========================================
+   SMALL IPHONES
+   ========================================== */
+
+
+@media(max-width:420px){
+
+
+
+    .contact-form button {
+
+
+        padding:10px;
+
+
+
+        font-size:0.9rem;
+
+
+
+    }
+
+
+
+
+
+
+
+    .contact-form .MuiTextField-root {
+
+
+        margin-bottom:15px;
+
+
+
+    }
+
+
 
 }

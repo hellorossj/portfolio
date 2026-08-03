@@ -1,155 +1,536 @@
+/* ==========================================
+   MAIN / HERO SECTION
+   ========================================== */
+
+
 .dark-mode .about-section {
-    background-color: rgba(0, 0, 0, 0.2);
+
+    background-color:rgba(0,0,0,0.2);
+
 }
+
+
+
+
+
+
 
 .about-section {
-    display: flex;
-    gap: 30px;
-    justify-content: flex-start;
-    align-items: center;
-    width: 100%;
-    padding: 0px 15%;
-    min-height: 700px;
-    background-image: url("../images/bg-dark.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
+
+
+    display:flex;
+
+
+    gap:30px;
+
+
+    justify-content:flex-start;
+
+
+    align-items:center;
+
+
+
+    width:100%;
+
+
+
+    min-height:700px;
+
+
+
+    padding:0 15%;
+
+
+
+    box-sizing:border-box;
+
+
+
+    background-image:url("../images/bg-dark.png");
+
+
+
+    background-repeat:no-repeat;
+
+
+
+    background-size:cover;
+
+
+
+    background-position:center;
+
+
+
+    /*
+       Fixed backgrounds cause issues on iOS Safari
+       so only enable on larger screens
+    */
+
+    background-attachment:fixed;
+
+
+
 }
+
+
+
+
+
+
+
+
+/* ==========================================
+   CONTENT
+   ========================================== */
+
 
 .about-section .content {
-    text-align: left;
-    z-index: 2;
 
-    .social_icons {
-        display: flex;
-        flex-direction: row;
-        gap: 10px;
-        color: white;
 
-        svg {
-            font-size: 1.8em;
-        }
-    }
+    text-align:left;
 
-    .mobile_social_icons {
-        display: none;
-    }
 
-    p {
-        font-size: 1.5em;
-        margin-block-start: 0px;
-        margin-block-end: 0px;
-    }
 
-    h1 {
-        font-size: 5em;
-        margin-block-start: 0px;
-        margin-block-end: 0px;
-    }
+    z-index:2;
+
+
+
+    max-width:750px;
+
+
+
 }
+
+
+
+
+
+.about-section .content p {
+
+
+    font-size:1.5em;
+
+
+
+    margin:0;
+
+
+
+    line-height:1.5;
+
+
+
+}
+
+
+
+
+
+.about-section .content h1 {
+
+
+    font-size:5em;
+
+
+
+    margin:0;
+
+
+
+    line-height:1.1;
+
+
+
+}
+
+
+
+
+
+
+
+
+/* ==========================================
+   SOCIAL ICONS
+   ========================================== */
+
+
+.about-section .content .social_icons {
+
+
+    display:flex;
+
+
+
+    flex-direction:row;
+
+
+
+    gap:10px;
+
+
+
+    color:white;
+
+
+
+}
+
+
+
+
+
+.about-section .content .social_icons svg {
+
+
+    font-size:1.8em;
+
+
+
+}
+
+
+
+
+
+
+
+.mobile_social_icons {
+
+
+    display:none;
+
+
+
+}
+
+
+
+
+
+
+
+
+/* ==========================================
+   PROFILE IMAGE
+   ========================================== */
+
 
 .about-section .image-wrapper {
-    z-index: 2;
-    img {
-        width: 150px;
-        border-radius: 50%;
-    }
+
+
+    z-index:2;
+
+
+
+    flex-shrink:0;
+
+
+
 }
+
+
+
+
+
+.about-section .image-wrapper img {
+
+
+    width:150px;
+
+
+
+    height:150px;
+
+
+
+    object-fit:cover;
+
+
+
+    border-radius:50%;
+
+
+
+}
+
+
+
+
+
+
+
+
+/* ==========================================
+   GENERAL ABOUT TEXT
+   ========================================== */
+
 
 .about p {
-    text-align: center;
-    padding-top: 30%;
-    padding-bottom: 30%;
+
+
+    text-align:center;
+
+
+
+    padding-top:30%;
+
+
+
+    padding-bottom:30%;
+
+
+
 }
 
-@media screen {
-    @media (max-width: 567px) {
-        .nav-left{
-            padding-top: 20px;
-            float:left;
-        }
 
-        .nav-left img {
-            height: 35px
-        }
 
-        .nav-right {
-            float:right;
-        }
 
-        .nav-right li {
-            padding: 10px 15px;
-            list-style:none;
-            font-size:13px;
-            color:white;
-            width: 10%;
-        }
 
-        .nav-right ul {
-            list-style-type: none;
-            margin: 0px;
-            padding: 0px;
-        }
 
-        body {
-            width: 100%;
-        }
 
-        .about {
-            padding-left: 5%;
-            padding-right: 5%;
-            font-size: 12px;
-        }
+
+/* ==========================================
+   TABLET
+   ========================================== */
+
+
+@media(max-width:900px){
+
+
+
+    .about-section {
+
+
+        padding:0 8%;
+
+
+
     }
 
-    @media (max-width:768px) {
-        .about-section h1 {
-            font-size: 4em !important;
-            text-align: left;
-        }
 
-        .about-section p {
-            text-align: left;
-        }
 
-        .container {
-            display: initial;
-        }
+    .about-section .content h1 {
 
-        .social_icons {
-            display: none !important;
-        }
 
-        .mobile_social_icons {
-            padding-top: 10px;
-            display: flex !important;
-            flex-direction: row;
-            gap: 10px;
-            color: white;
-    
-            svg {
-                font-size: 1.8em;
-            }
-        }
+        font-size:4em;
 
-        .about-section {
-            padding-top: 150px;
-            display: block;
-            padding-left: 0px;
-            padding-right: 0px;
-        }
 
-        .about-section .content {
-            width: 90%;
-            padding-left: 5%;
-            padding-right: 5%;
-            padding-bottom: 5%;
-        }
 
-        .about-section .image-wrapper {
-            padding-left: 5%;
-            width: 100%;
-        }
     }
+
+
+
+    .about-section .content p {
+
+
+        font-size:1.3em;
+
+
+
+    }
+
+
+
+}
+
+
+
+
+
+
+
+
+/* ==========================================
+   MOBILE
+   ========================================== */
+@media (max-width:768px) {
+
+
+    .about-section {
+
+        padding-top:120px;
+
+        display:flex;
+
+        flex-direction:column;
+
+        justify-content:center;
+
+        align-items:center;
+
+        padding-left:0;
+
+        padding-right:0;
+
+        min-height:700px;
+
+    }
+
+
+
+    /* ===========================
+       PROFILE IMAGE FIRST
+       =========================== */
+
+
+    .about-section .image-wrapper {
+
+        order:1;
+
+        padding-left:0;
+
+        width:100%;
+
+        display:flex;
+
+        justify-content:center;
+
+        margin-bottom:25px;
+
+    }
+
+
+
+    .about-section .image-wrapper img {
+
+    width:130px;
+
+    height:130px;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+}
+
+
+
+
+
+    /* ===========================
+       TEXT BELOW IMAGE
+       =========================== */
+
+
+    .about-section .content {
+
+        order:2;
+
+        width:90%;
+
+        padding-left:5%;
+
+        padding-right:5%;
+
+        padding-bottom:5%;
+
+        text-align:center;
+
+    }
+
+
+
+
+
+    /* Name */
+
+    .about-section .content h1 {
+
+        font-size:3.2em !important;
+
+        line-height:1.1;
+
+        text-align:center;
+
+        white-space:nowrap;
+
+        margin:0;
+
+    }
+
+
+
+
+
+    /* Description */
+
+    .about-section .content p {
+
+        font-size:1.15em;
+
+        line-height:1.5;
+
+        text-align:center;
+
+    }
+
+
+
+
+
+    /* Social icons */
+
+    .social_icons {
+
+        display:none !important;
+
+    }
+
+
+
+    .mobile_social_icons {
+
+        padding-top:15px;
+
+        display:flex !important;
+
+        justify-content:center;
+
+        align-items:center;
+
+        flex-direction:row;
+
+        gap:10px;
+
+        color:white;
+
+    }
+
+
+
+    .mobile_social_icons svg {
+
+        font-size:1.8em;
+
+    }
+
+
+}
+
+
+
+
+
+
+@media (max-width:400px) {
+
+
+    .about-section .content h1 {
+
+        font-size:2.7em !important;
+
+    }
+
+
+
+    .about-section .content p {
+
+        font-size:1.05em;
+
+    }
+
+
 }

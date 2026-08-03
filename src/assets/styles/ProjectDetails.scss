@@ -7,7 +7,13 @@
 
     width:100%;
 
+    overflow-x:hidden;
+
 }
+
+
+
+
 
 
 
@@ -20,6 +26,8 @@
 .project-hero {
 
     height:350px;
+
+    width:100%;
 
     background-size:cover;
 
@@ -43,39 +51,57 @@
 
     justify-content:center;
 
-    background:rgba(0,0,0,0.005);
+    padding:20px;
+
+    background:rgba(0,0,0,0.05);
 
 }
 
 
 
-.dark-mode  .hero-overlay h1 {
+
+
+
+.dark-mode .hero-overlay h1 {
 
     color:white;
 
-    font-size:42px;
-
-    max-width:900px;
-
-    text-align:center;
-
-    padding:20px;
-
 }
 
-.light-mode  .hero-overlay h1 {
+
+.light-mode .hero-overlay h1 {
 
     color:black;
 
+}
+
+
+
+.hero-overlay h1 {
+
+
     font-size:42px;
 
     max-width:900px;
+
+    width:100%;
 
     text-align:center;
 
     padding:20px;
 
+    line-height:1.2;
+
+    word-wrap:break-word;
+
+
 }
+
+
+
+
+
+
 
 
 /* ==========================================
@@ -93,17 +119,23 @@
 
     z-index:1000;
 
+
     background:none;
 
     border:none;
 
+
     padding:0;
+
 
     font-size:48px;
 
+
     cursor:pointer;
 
+
     transition:0.25s ease;
+
 
 }
 
@@ -111,7 +143,10 @@
 
 
 
+
+
 /* Dark mode */
+
 
 .back-arrow.dark {
 
@@ -133,7 +168,10 @@
 
 
 
+
+
 /* Light mode */
+
 
 .back-arrow.light {
 
@@ -155,20 +193,144 @@
 
 
 
-/* Mobile adjustments */
-
-@media (max-width:600px) {
 
 
-    .back-arrow {
 
-        top:70px;
+/* ==========================================
+   PROJECT CONTENT
+   ========================================== */
 
-        left:20px;
 
-        font-size:40px;
+.project-content {
 
-    }
+
+    width:100%;
+
+
+    max-width:1000px;
+
+
+    margin:auto;
+
+
+    box-sizing:border-box;
+
+
+    padding:
+
+        60px 30px;
+
+
+}
+
+
+
+
+
+
+
+.project-section {
+
+
+    margin-bottom:60px;
+
+
+}
+
+
+
+
+
+
+
+.project-section h2 {
+
+
+    font-size:32px;
+
+
+    margin-bottom:20px;
+
+
+    line-height:1.25;
+
+
+}
+
+
+
+
+
+
+
+.project-section p {
+
+
+    font-size:18px;
+
+
+    line-height:1.7;
+
+
+    white-space:pre-line;
+
+
+    margin-bottom:20px;
+
+
+}
+
+
+
+
+
+
+
+
+/* ==========================================
+   GLOBAL PROJECT IMAGES
+   ========================================== */
+
+
+.project-section img,
+.project-section video {
+
+
+    max-width:100%;
+
+    height:auto;
+
+
+}
+
+
+
+
+
+
+
+
+/* ==========================================
+   IMAGE CAPTIONS
+   ========================================== */
+
+
+.image-caption {
+
+
+    font-size:13px !important;
+
+
+    line-height:1.4 !important;
+
+
+    opacity:0.7;
+
+
+    margin-top:10px;
+
+
+    text-align:center;
 
 
 }
@@ -182,13 +344,321 @@
 
 
 /* ==========================================
-   PROJECT CONTENT
+   TABLET RESPONSIVE
    ========================================== */
 
+
+@media(max-width:900px){
+
+
+
+    .project-hero {
+
+
+        height:300px;
+
+
+    }
+
+
+
+
+    .hero-overlay h1 {
+
+
+        font-size:36px;
+
+
+        padding:15px;
+
+
+    }
+
+
+
+
+    .project-content {
+
+
+        padding:
+
+            50px 25px;
+
+
+    }
+
+
+
+
+    .project-section {
+
+
+        margin-bottom:45px;
+
+
+    }
+
+
+
+
+    .project-section h2 {
+
+
+        font-size:28px;
+
+
+    }
+
+
+
+
+    .project-section p {
+
+
+        font-size:17px;
+
+
+    }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ==========================================
+   MOBILE RESPONSIVE
+   ========================================== */
+
+
+@media(max-width:600px){
+
+
+
+    .project-hero {
+
+
+        height:240px;
+
+
+    }
+
+
+
+
+
+    .hero-overlay {
+
+
+        padding:15px;
+
+
+    }
+
+
+
+
+
+    .hero-overlay h1 {
+
+
+        font-size:28px;
+
+
+        padding:10px;
+
+
+        line-height:1.25;
+
+
+    }
+
+
+
+
+
+
+
+    /* Back button */
+
+
+    .back-arrow {
+
+
+        top:75px;
+
+
+        left:15px;
+
+
+        font-size:38px;
+
+
+    }
+
+
+
+
+
+
+
+    .project-content {
+
+
+        padding:
+
+            40px 18px;
+
+
+    }
+
+
+
+
+
+
+
+    .project-section {
+
+
+        margin-bottom:40px;
+
+
+    }
+
+
+
+
+
+
+
+    .project-section h2 {
+
+
+        font-size:24px;
+
+
+        margin-bottom:15px;
+
+
+    }
+
+
+
+
+
+
+
+    .project-section p {
+
+
+        font-size:16px;
+
+
+        line-height:1.6;
+
+
+    }
+
+
+
+
+
+
+    .image-caption {
+
+
+        font-size:12px !important;
+
+
+    }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ==========================================
+   SMALL PHONE SUPPORT
+   ========================================== */
+
+
+@media(max-width:400px){
+
+
+
+    .hero-overlay h1 {
+
+
+        font-size:24px;
+
+
+    }
+
+
+
+
+
+    .project-content {
+
+
+        padding:
+
+            35px 15px;
+
+
+    }
+
+
+
+
+
+    .project-section h2 {
+
+
+        font-size:22px;
+
+
+    }
+
+
+
+
+    .project-section p {
+
+
+        font-size:15px;
+
+
+    }
+
+
+
+
+}
+
+/* ==========================================
+   PROJECT CONTENT
+   ========================================== */
 
 .project-content {
 
     max-width:1000px;
+
+    width:100%;
 
     margin:auto;
 
@@ -217,6 +687,9 @@
 
 
 
+
+/* Main paragraph text */
+
 .project-section p {
 
     font-size:18px;
@@ -225,8 +698,42 @@
 
     white-space:pre-line;
 
+    margin-bottom:20px;
+
 }
 
+
+
+
+
+/* ==========================================
+   PROJECT BULLET LISTS
+   ========================================== */
+
+
+.project-section ul {
+
+    padding-left:25px;
+
+    margin-top:15px;
+
+    margin-bottom:25px;
+
+}
+
+
+
+.project-section li {
+
+    font-size:18px;
+
+    line-height:1.7;
+
+    margin-bottom:8px;
+
+    color:inherit;
+
+}
 
 
 
@@ -249,5 +756,110 @@
     margin-top:10px;
 
     text-align:center;
+
+}
+
+
+
+
+
+
+
+/* ==========================================
+   MOBILE RESPONSIVE
+   ========================================== */
+
+
+@media(max-width:768px){
+
+
+    .project-content {
+
+        padding:40px 20px;
+
+    }
+
+
+
+    .project-section {
+
+        margin-bottom:45px;
+
+    }
+
+
+
+    .project-section h2 {
+
+        font-size:26px;
+
+        margin-bottom:15px;
+
+    }
+
+
+
+    .project-section p {
+
+        font-size:16px;
+
+        line-height:1.6;
+
+    }
+
+
+
+    .project-section ul {
+
+        padding-left:22px;
+
+    }
+
+
+
+    .project-section li {
+
+        font-size:16px;
+
+        line-height:1.6;
+
+        margin-bottom:6px;
+
+    }
+
+
+
+}
+
+
+
+@media(max-width:500px){
+
+
+    .project-content {
+
+        padding:35px 15px;
+
+    }
+
+
+
+    .project-section h2 {
+
+        font-size:23px;
+
+    }
+
+
+
+    .project-section p,
+    .project-section li {
+
+        font-size:15px;
+
+        line-height:1.55;
+
+    }
+
 
 }
