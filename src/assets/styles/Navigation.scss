@@ -1,296 +1,672 @@
-.navigation-bar {
+/* ==========================================
+   LIQUID GLASS NAVIGATION
+   ========================================== */
 
-    display: flex;
 
-    align-items: center;
+.glass-root {
+
+    position:relative;
+
+    width:100%;
 
 }
 
+
+
+
+
+/* ==========================================
+   REMOVE MUI APPBAR DEFAULTS
+   ========================================== */
+
+
+#navigation,
+.MuiAppBar-root {
+
+    position:fixed !important;
+
+    top:25px !important;
+
+    left:0;
+
+    width:100%;
+
+    height:auto !important;
+
+    margin:0 !important;
+
+    padding:0 !important;
+
+    background:transparent !important;
+
+    box-shadow:none !important;
+
+}
+
+
+
+
+
+
+
+/* ==========================================
+   MAIN GLASS PILL
+   ========================================== */
+
+
+.glass-navbar {
+
+
+    position:relative;
+
+
+    width:calc(100% - 80px);
+
+
+    max-width:1300px;
+
+
+    margin:auto;
+
+
+
+    border-radius:50px;
+
+
+    overflow:hidden;
+
+
+
+    background:rgba(255,255,255,0.30) !important;
+
+
+
+    backdrop-filter:blur(10px) saturate(100%);
+
+
+    -webkit-backdrop-filter:blur(10px) saturate(100%);
+
+
+
+    border:1px solid rgba(255,255,255,0.55);
+
+
+
+    box-shadow:
+
+
+        0 25px 80px rgba(0,0,0,0.35),
+
+
+        inset 0 1px 4px rgba(255,255,255,0.8),
+
+
+        inset 0 -3px 8px rgba(0,0,0,0.15);
+
+
+}
+
+
+
+
+
+
+
+/* ==========================================
+   LIQUID GLASS CANVAS
+   ========================================== */
+
+
+.glass-navbar canvas {
+
+
+    position:absolute !important;
+
+
+    inset:0;
+
+
+    width:100% !important;
+
+
+    height:100% !important;
+
+
+    border-radius:50px;
+
+
+    z-index:0 !important;
+
+
+}
+
+
+
+
+
+
+
+/* ==========================================
+   GLASS SHINE
+   ========================================== */
+
+
+.glass-navbar::before {
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+    top:0;
+
+
+    left:0;
+
+
+    width:100%;
+
+
+    height:45%;
+
+
+
+    background:
+
+
+        linear-gradient(
+
+            to bottom,
+
+            rgba(255,255,255,0.40),
+
+            rgba(255,255,255,0.12),
+
+            transparent
+
+        );
+
+
+
+    border-radius:50px 50px 0 0;
+
+
+
+    z-index:1;
+
+
+    pointer-events:none;
+
+
+}
+
+
+
+
+
+
+.glass-navbar::after {
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+    inset:0;
+
+
+
+    border-radius:50px;
+
+
+
+    box-shadow:
+
+
+        inset 0 0 35px rgba(255,255,255,0.15);
+
+
+
+    z-index:1;
+
+
+    pointer-events:none;
+
+
+}
+
+
+
+
+
+
+
+/* ==========================================
+   TOOLBAR CONTENT
+   ========================================== */
+
+
+.navigation-bar {
+
+
+    position:relative;
+
+
+    z-index:3;
+
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    justify-content:center;
+
+
+
+    min-height:52px !important;
+
+
+
+    padding:6px 25px !important;
+
+
+
+    background:transparent !important;
+
+
+}
+
+
+
+
+
+
+
+/* ==========================================
+   DARK MODE BUTTON LEFT
+   ========================================== */
 
 
 .mode-toggle {
 
-    cursor: pointer;
 
-    display: flex;
+    position:absolute;
 
-    align-items: center;
 
-    margin-right: 25px;
+    left:25px;
+
+
+    top:50%;
+
+
+    transform:translateY(-50%);
+
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+
+    cursor:pointer;
+
 
 }
 
+
+
+
+
+
+
+
+/* ==========================================
+   NAV LINKS CENTER
+   ========================================== */
+
+
+.nav-links {
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    justify-content:center;
+
+
+
+    gap:10px;
+
+
+}
+
+
+
+
+
+
+
+/* ==========================================
+   NAV BUTTONS
+   ========================================== */
 
 
 .nav-button {
 
-    font-family: 'Courier Prime', monospace !important;
 
-    font-size: 1rem !important;
-
-    font-weight: 500 !important;
-
-    text-transform: none !important;
-
-    background-color: transparent !important;
-
-    transition: color 0.3s ease !important;
+    font-family:'Courier Prime', monospace !important;
 
 
-    &:hover {
 
-        color: #5000ca !important;
+    font-size:0.9rem !important;
 
-        background-color: transparent !important;
+
+
+    font-weight:500 !important;
+
+
+
+    text-transform:none !important;
+
+
+
+    background:transparent !important;
+
+
+
+    border-radius:25px !important;
+
+
+
+    padding:5px 12px !important;
+
+
+
+    transition:color 0.25s ease !important;
+
+
+}
+
+
+
+
+
+.dark-mode .nav-button {
+
+
+    color:white !important;
+
+
+}
+
+
+
+
+
+.light-mode .nav-button {
+
+
+    color:rgb(39,40,34) !important;
+
+
+}
+
+
+
+
+
+.nav-button:hover {
+
+
+    color:#5000ca !important;
+
+
+}
+
+
+
+
+
+
+
+/* ==========================================
+   RESUME BUTTON FAR RIGHT
+   ========================================== */
+
+
+.nav-links .resume-button {
+
+
+    position:absolute;
+
+
+    right:25px;   /* <-- CHANGE THIS TO MOVE RESUME LEFT/RIGHT */
+
+
+    top:50%;
+
+
+    transform:translateY(-50%);
+
+
+
+    margin:0 !important;
+
+
+
+    border:none !important;
+
+
+
+    background:transparent !important;
+
+
+
+    border-radius:25px !important;
+
+
+
+    padding:5px 12px !important;
+
+
+}
+
+
+
+
+
+.nav-links .resume-button:hover {
+
+
+    background:#5000ca !important;
+
+
+    color:white !important;
+
+
+}
+
+
+
+
+
+
+
+/* ==========================================
+   DARK MODE GLASS
+   ========================================== */
+
+
+.dark-mode .glass-navbar {
+
+
+    background:rgba(10,10,15,0.58) !important;
+
+
+
+    backdrop-filter:blur(10px) saturate(140%);
+
+
+    -webkit-backdrop-filter:blur(10px) saturate(140%);
+
+
+
+    border-color:rgba(255,255,255,0.25);
+
+
+
+    box-shadow:
+
+
+        0 30px 90px rgba(0,0,0,0.65),
+
+
+        inset 0 1px 5px rgba(255,255,255,0.18);
+
+
+}
+
+
+
+
+
+
+
+.dark-mode .glass-navbar::before {
+
+
+    background:
+
+
+        linear-gradient(
+
+            to bottom,
+
+            rgba(255,255,255,0.18),
+
+            transparent
+
+        );
+
+
+}
+
+
+
+
+
+
+
+/* ==========================================
+   LIGHT MODE GLASS
+   ========================================== */
+
+
+.light-mode .glass-navbar {
+
+
+    background:rgba(255,255,255,0.48) !important;
+
+
+
+    backdrop-filter:blur(10px) saturate(160%);
+
+
+
+    -webkit-backdrop-filter:blur(10px) saturate(160%);
+
+
+
+    border-color:rgba(255,255,255,0.75);
+
+
+}
+
+
+
+
+
+
+
+
+/* ==========================================
+   MOBILE
+   ========================================== */
+
+
+@media(max-width:768px){
+
+
+    #navigation {
+
+        top:15px;
 
     }
 
-}
 
 
+    .glass-navbar {
 
-/* DARK MODE */
 
-.dark-mode .navbar-fixed-top .nav-button {
+        width:calc(100% - 30px);
 
-    color: white !important;
 
-}
+    }
 
 
 
-.dark-mode .navbar-fixed-top .nav-button:hover {
+    .navigation-bar {
 
-    color: #5000ca !important;
 
-}
+        padding:6px 15px !important;
 
 
+    }
 
 
 
-/* LIGHT MODE */
+    .nav-button {
 
-.light-mode .navbar-fixed-top .nav-button {
 
-    color: rgb(39,40,34) !important;
+        font-size:0.7rem !important;
 
-}
 
+        padding:4px 6px !important;
 
 
-.light-mode .navbar-fixed-top .nav-button:hover {
+    }
 
-    color: #5000ca !important;
 
-}
 
+    .mode-toggle {
 
 
+        left:15px;
 
-/* Prevent MUI AppBar overriding colors */
 
-.navbar-fixed-top .MuiButton-root {
+    }
 
-    background-color: transparent !important;
 
-}
 
+    .nav-links .resume-button {
 
 
+        right:15px;
 
-/* Mobile menu */
 
-.navigation-bar-responsive {
+    }
 
-    padding: 20px;
-
-}
-
-
-.mobile-menu-top {
-
-    font-family: 'Courier Prime', monospace;
-
-    font-size: 1.2rem;
-
-}
-
-.nav-links {
-
-    display:flex;
-
-    align-items:center;
-
-}
-
-.resume-button {
-
-    margin-left:10px !important;
-
-    border:1px solid currentColor !important;
-
-    border-radius:8px !important;
-
-    padding:6px 14px !important;
-
-}
-
-
-
-/* Make sure the text itself inherits */
-
-.resume-button span {
-
-    color:inherit !important;
-
-}
-
-
-
-/* DARK MODE */
-
-.dark-mode .resume-button {
-
-    color:white !important;
-
-    border-color:white !important;
-
-}
-
-
-
-.dark-mode .resume-button:hover {
-
-    background-color:#5000ca !important;
-
-    border-color:#5000ca !important;
-
-}
-
-
-
-.dark-mode .resume-button:hover span {
-
-    color:white !important;
-
-}
-
-
-
-
-
-/* LIGHT MODE */
-
-.light-mode .resume-button {
-
-    color:rgb(39,40,34) !important;
-
-    border-color:rgb(39,40,34) !important;
-
-}
-
-
-
-.light-mode .resume-button:hover {
-
-    background-color:#5000ca !important;
-
-    border-color:#5000ca !important;
-
-}
-
-
-
-.light-mode .resume-button:hover span {
-
-    color:rgb(39,40,34) !important;
-
-}
-
-/* ==========================================
-   RESUME BUTTON OVERRIDE
-   ========================================== */
-
-.navbar-fixed-top .resume-button.MuiButton-root {
-
-    margin-left:10px !important;
-
-    border:1px solid white !important;
-
-    border-radius:8px !important;
-
-    padding:6px 14px !important;
-
-}
-
-
-
-/* Force text colour */
-
-.navbar-fixed-top .resume-button.MuiButton-root,
-.navbar-fixed-top .resume-button.MuiButton-root span {
-
-    color:white !important;
-
-}
-
-
-
-/* Dark mode hover */
-
-.dark-mode .navbar-fixed-top .resume-button.MuiButton-root:hover,
-.dark-mode .navbar-fixed-top .resume-button.MuiButton-root:hover span {
-
-    color:white !important;
-
-}
-
-
-.dark-mode .navbar-fixed-top .resume-button.MuiButton-root:hover {
-
-    background-color:#5000ca !important;
-
-    border-color:#5000ca !important;
-
-}
-
-
-
-
-
-/* Light mode */
-
-.light-mode .navbar-fixed-top .resume-button.MuiButton-root,
-.light-mode .navbar-fixed-top .resume-button.MuiButton-root span {
-
-    color:rgb(39,40,34) !important;
-
-}
-
-
-
-.light-mode .navbar-fixed-top .resume-button.MuiButton-root {
-
-    border-color:rgb(39,40,34) !important;
-
-}
-
-
-
-.light-mode .navbar-fixed-top .resume-button.MuiButton-root:hover,
-.light-mode .navbar-fixed-top .resume-button.MuiButton-root:hover span {
-
-    color:rgb(255, 255, 255) !important;
-
-}
-
-
-
-.light-mode .navbar-fixed-top .resume-button.MuiButton-root:hover {
-
-    background-color:#5000ca !important;
-
-    border-color:#5000ca !important;
 
 }

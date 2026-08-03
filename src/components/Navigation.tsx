@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 
 import AppBar from "@mui/material/AppBar";
@@ -9,6 +9,8 @@ import Toolbar from "@mui/material/Toolbar";
 
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import LightModeIcon from "@mui/icons-material/LightMode";
+
+import { LiquidGlass } from "@ybouane/liquidglass";
 
 import "../assets/styles/Navigation.scss";
 
@@ -45,6 +47,72 @@ function Navigation({parentToChild, modeChange}:any){
 
 
 
+    const glassRoot = useRef<HTMLDivElement>(null);
+
+    const glassElement = useRef<HTMLDivElement>(null);
+
+
+
+
+
+
+    // Initialize Liquid Glass
+
+    useEffect(()=>{
+
+
+        if(!glassRoot.current || !glassElement.current)
+            return;
+
+
+        let instance:any;
+
+
+
+        const initializeGlass = async()=>{
+
+
+            instance = await LiquidGlass.init({
+
+                root: glassRoot.current as HTMLElement,
+
+                glassElements: [
+
+                    glassElement.current as HTMLElement
+
+                ]
+
+            });
+
+
+        };
+
+
+
+        initializeGlass();
+
+
+
+        return()=>{
+
+
+            if(instance){
+
+                instance.destroy();
+
+            }
+
+
+        };
+
+
+    },[]);
+
+
+
+
+
+
 
 
 
@@ -65,7 +133,9 @@ function Navigation({parentToChild, modeChange}:any){
                 setTimeout(()=>{
 
 
-                    const element = document.getElementById(section);
+                    const element =
+                    document.getElementById(section);
+
 
 
                     if(element){
@@ -98,6 +168,9 @@ function Navigation({parentToChild, modeChange}:any){
 
 
 
+
+
+    // Navbar scroll detection
 
     useEffect(()=>{
 
@@ -134,7 +207,9 @@ function Navigation({parentToChild, modeChange}:any){
         if(location.pathname === "/"){
 
 
-            const element=document.getElementById(section);
+            const element =
+            document.getElementById(section);
+
 
 
             if(element){
@@ -145,6 +220,7 @@ function Navigation({parentToChild, modeChange}:any){
                     behavior:"smooth"
 
                 });
+
 
 
                 window.history.replaceState(
@@ -188,10 +264,14 @@ function Navigation({parentToChild, modeChange}:any){
 
 
 
-        <Box>
+        <div
+            ref={glassRoot}
+            className="glass-root"
+        >
 
 
             <CssBaseline/>
+
 
 
 
@@ -208,107 +288,177 @@ function Navigation({parentToChild, modeChange}:any){
 
 
 
-                <Toolbar className="navigation-bar">
 
+                <div
 
+                    ref={glassElement}
 
+                    className="glass-navbar"
 
+                    data-config={JSON.stringify({
 
-                    <Box
+    blurAmount:0.10,
 
-                        className="mode-toggle"
+    refraction:1.5,
 
-                        onClick={modeChange}
+    chromAberration:0.2,
 
-                    >
+    edgeHighlight:0.45,
 
+    specular:0.8,
 
-                        {
+    fresnel:1.5,
 
-                            mode==="dark"
+    cornerRadius:50,
 
-                            ?
+    zRadius:80,
 
-                            <LightModeIcon/>
+    shadowOpacity:0.65,
 
-                            :
+    saturation:-0.15,
 
-                            <DarkModeIcon/>
+    brightness:0.15,
 
-                        }
+    bevelMode:0
 
+})}
 
-                    </Box>
-
-
-
-
-
-
-
-                    <Box className="nav-links">
-
-
-
-                        {
-
-
-                            navItems.map((item)=>(
-
-
-                                <Button
-
-                                    key={item[0]}
-
-                                    className="nav-button"
-
-                                    onClick={()=>scrollToSection(item[1])}
-
-                                >
-
-                                    {item[0]}
-
-                                </Button>
-
-
-
-                            ))
-
-
-
-                        }
+                >
 
 
 
 
 
 
+                    <Toolbar className="navigation-bar">
 
-                        <Button
 
-                            className="nav-button resume-button"
 
-                            href={resume}
 
-                            target="_blank"
 
-                            rel="noreferrer"
+                        <Box
+
+                            className="mode-toggle"
+
+                            onClick={modeChange}
 
                         >
 
-                            Resume
-
-                        </Button>
 
 
+                            {
+
+                                mode==="dark"
+
+                                ?
+
+                                <LightModeIcon/>
+
+                                :
+
+                                <DarkModeIcon/>
+
+                            }
 
 
-                    </Box>
+
+                        </Box>
 
 
 
 
-                </Toolbar>
+
+
+
+
+
+                        <Box className="nav-links">
+
+
+
+
+
+                            {
+
+                                navItems.map((item)=>(
+
+
+
+                                    <Button
+
+                                        key={item[0]}
+
+                                        className="nav-button"
+
+                                        onClick={()=>scrollToSection(item[1])}
+
+                                    >
+
+
+                                        {item[0]}
+
+
+                                    </Button>
+
+
+
+                                ))
+
+
+                            }
+
+
+
+
+
+
+
+
+
+                            <Button
+
+                                className="nav-button resume-button"
+
+                                href={resume}
+
+                                target="_blank"
+
+                                rel="noreferrer"
+
+                            >
+
+
+                                Resume
+
+
+                            </Button>
+
+
+
+
+
+
+
+                        </Box>
+
+
+
+
+
+
+
+                    </Toolbar>
+
+
+
+
+
+
+                </div>
+
+
+
+
 
 
 
@@ -316,11 +466,16 @@ function Navigation({parentToChild, modeChange}:any){
 
 
 
-        </Box>
+
+
+
+
+        </div>
 
 
 
     );
+
 
 
 }
