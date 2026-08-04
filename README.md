@@ -1,6 +1,6 @@
-# Ross Jones | Engineering Portfolio 🚀
+# Ross Jones Portfolio 🚀
 
-Welcome to my engineering portfolio!
+Welcome to my portfolio!
 
 This website showcases my engineering projects, undergraduate thesis, design experience, technical skills, and professional background.
 

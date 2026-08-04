@@ -17,11 +17,8 @@
 
 
 
-
-
-
 /* ==========================================
-   REMOVE MUI APPBAR DEFAULTS
+   APPBAR RESET
    ========================================== */
 
 
@@ -51,11 +48,8 @@
 
 
 
-
-
-
 /* ==========================================
-   MAIN GLASS PILL
+   MAIN GLASS NAVBAR
    ========================================== */
 
 
@@ -69,7 +63,6 @@
 
 
     max-width:1300px;
-
 
 
     margin:auto;
@@ -96,9 +89,7 @@
 
 
 
-
     border:1px solid rgba(255,255,255,0.55);
-
 
 
 
@@ -114,16 +105,39 @@
         inset 0 -3px 8px rgba(0,0,0,0.15);
 
 
+
+    transition:
+
+
+        height 0.35s ease,
+
+
+        border-radius 0.35s ease;
+
+
+
+}
+
+
+
+
+/* Expanded mobile navbar */
+
+
+.glass-navbar.mobile-expanded {
+
+
+    border-radius:35px;
+
+
 }
 
 
 
 
 
-
-
 /* ==========================================
-   LIQUID GLASS CANVAS
+   GLASS CANVAS
    ========================================== */
 
 
@@ -136,21 +150,23 @@
     inset:0;
 
 
+
     width:100% !important;
 
 
     height:100% !important;
 
 
-    border-radius:50px;
+
+    border-radius:inherit;
+
 
 
     z-index:0 !important;
 
 
+
 }
-
-
 
 
 
@@ -200,7 +216,7 @@
 
 
 
-    border-radius:50px 50px 0 0;
+    border-radius:inherit;
 
 
 
@@ -211,9 +227,8 @@
     pointer-events:none;
 
 
+
 }
-
-
 
 
 
@@ -232,7 +247,7 @@
 
 
 
-    border-radius:50px;
+    border-radius:inherit;
 
 
 
@@ -250,6 +265,7 @@
     pointer-events:none;
 
 
+
 }
 
 
@@ -258,9 +274,8 @@
 
 
 
-
 /* ==========================================
-   TOOLBAR CONTENT
+   TOOLBAR
    ========================================== */
 
 
@@ -280,6 +295,7 @@
     align-items:center;
 
 
+
     justify-content:center;
 
 
@@ -295,6 +311,7 @@
     background:transparent !important;
 
 
+
 }
 
 
@@ -304,7 +321,7 @@
 
 
 /* ==========================================
-   DARK MODE BUTTON LEFT
+   MODE BUTTON
    ========================================== */
 
 
@@ -320,11 +337,13 @@
     top:50%;
 
 
+
     transform:translateY(-50%);
 
 
 
     display:flex;
+
 
 
     align-items:center;
@@ -334,6 +353,7 @@
     cursor:pointer;
 
 
+
 }
 
 
@@ -341,10 +361,8 @@
 
 
 
-
-
 /* ==========================================
-   CENTER NAV LINKS
+   DESKTOP NAV LINKS
    ========================================== */
 
 
@@ -364,8 +382,8 @@
     gap:10px;
 
 
-}
 
+}
 
 
 
@@ -408,15 +426,15 @@
 
 
 
-    transition:color 0.25s ease !important;
-
-
-
     white-space:nowrap;
 
 
-}
 
+    transition:0.25s ease !important;
+
+
+
+}
 
 
 
@@ -437,7 +455,7 @@
 .light-mode .nav-button {
 
 
-    color:rgb(39,40,34) !important;
+    color:#272822 !important;
 
 
 }
@@ -459,71 +477,31 @@
 
 
 
-
-
 /* ==========================================
-   RESUME BUTTON RIGHT SIDE
+   RESUME BUTTON
    ========================================== */
 
 
-.nav-links .resume-button {
+.resume-button {
 
 
-    position:absolute;
+    position:absolute !important;
+
 
 
     right:25px;
 
 
+
     top:50%;
+
 
 
     transform:translateY(-50%);
 
 
 
-    margin:0 !important;
-
-
-
-    border:none !important;
-
-
-
-    background:transparent !important;
-
-
-
-    border-radius:25px !important;
-
-
-
-    padding:5px 12px !important;
-
-
 }
-
-
-
-
-
-.nav-links .resume-button:hover {
-
-
-    background:#5000ca !important;
-
-
-    color:white !important;
-
-
-}
-
-
-
-
-
-
-
 
 /* ==========================================
    DARK MODE GLASS
@@ -549,7 +527,6 @@
 
 
 
-
     box-shadow:
 
 
@@ -559,8 +536,8 @@
         inset 0 1px 5px rgba(255,255,255,0.18);
 
 
-}
 
+}
 
 
 
@@ -616,437 +593,9 @@
     border-color:rgba(255,255,255,0.75);
 
 
-}
-
-.glass-root {
-    position:relative;
-    width:100%;
-}
-
-
-
-/* ==========================================
-   APPBAR RESET
-   ========================================== */
-
-
-#navigation,
-.MuiAppBar-root {
-
-    position:fixed !important;
-
-    top:25px !important;
-
-    left:0;
-
-    width:100%;
-
-    height:auto !important;
-
-    margin:0 !important;
-
-    padding:0 !important;
-
-    background:transparent !important;
-
-    box-shadow:none !important;
 
 }
 
-
-
-/* ==========================================
-   MAIN LIQUID GLASS NAVBAR
-   ========================================== */
-
-
-.glass-navbar {
-
-
-    position:relative;
-
-    width:calc(100% - 80px);
-
-    max-width:1300px;
-
-    margin:auto;
-
-
-    border-radius:50px;
-
-    overflow:hidden;
-
-
-    background:rgba(255,255,255,0.30) !important;
-
-
-    backdrop-filter:blur(10px) saturate(100%);
-
-    -webkit-backdrop-filter:blur(10px) saturate(100%);
-
-
-    border:1px solid rgba(255,255,255,0.55);
-
-
-    box-shadow:
-
-        0 25px 80px rgba(0,0,0,0.35),
-
-        inset 0 1px 4px rgba(255,255,255,0.8),
-
-        inset 0 -3px 8px rgba(0,0,0,0.15);
-
-
-    transition:
-
-        height 0.35s ease,
-
-        border-radius 0.35s ease;
-
-
-}
-
-
-
-
-
-/* ==========================================
-   GLASS CANVAS
-   ========================================== */
-
-
-.glass-navbar canvas {
-
-    position:absolute !important;
-
-    inset:0;
-
-    width:100% !important;
-
-    height:100% !important;
-
-    border-radius:50px;
-
-    z-index:0 !important;
-
-}
-
-
-
-
-
-/* ==========================================
-   GLASS SHINE
-   ========================================== */
-
-
-.glass-navbar::before {
-
-
-    content:"";
-
-    position:absolute;
-
-    top:0;
-
-    left:0;
-
-    width:100%;
-
-    height:45%;
-
-
-    background:
-
-        linear-gradient(
-
-            to bottom,
-
-            rgba(255,255,255,0.40),
-
-            rgba(255,255,255,0.12),
-
-            transparent
-
-        );
-
-
-    border-radius:50px 50px 0 0;
-
-    z-index:1;
-
-    pointer-events:none;
-
-
-}
-
-
-
-.glass-navbar::after {
-
-
-    content:"";
-
-    position:absolute;
-
-    inset:0;
-
-
-    border-radius:50px;
-
-
-    box-shadow:
-
-        inset 0 0 35px rgba(255,255,255,0.15);
-
-
-    z-index:1;
-
-    pointer-events:none;
-
-
-}
-
-
-
-
-
-/* ==========================================
-   TOOLBAR
-   ========================================== */
-
-
-.navigation-bar {
-
-
-    position:relative;
-
-    z-index:3;
-
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-
-    min-height:52px !important;
-
-    padding:6px 25px !important;
-
-
-    background:transparent !important;
-
-
-}
-
-
-
-
-/* ==========================================
-   DARK MODE BUTTON
-   ========================================== */
-
-
-.mode-toggle {
-
-
-    position:absolute;
-
-    left:25px;
-
-    top:50%;
-
-    transform:translateY(-50%);
-
-
-    display:flex;
-
-    align-items:center;
-
-
-    cursor:pointer;
-
-}
-
-
-
-
-
-
-/* ==========================================
-   DESKTOP LINKS
-   ========================================== */
-
-
-.nav-links {
-
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-
-    gap:10px;
-
-}
-
-
-
-
-.nav-button {
-
-
-    font-family:'Courier Prime', monospace !important;
-
-    font-size:0.9rem !important;
-
-    font-weight:500 !important;
-
-
-    text-transform:none !important;
-
-
-    background:transparent !important;
-
-
-    border-radius:25px !important;
-
-
-    padding:5px 12px !important;
-
-
-    white-space:nowrap;
-
-
-    transition:0.25s ease !important;
-
-
-}
-
-
-
-.dark-mode .nav-button {
-
-    color:white !important;
-
-}
-
-
-
-.light-mode .nav-button {
-
-    color:#272822 !important;
-
-}
-
-
-
-.nav-button:hover {
-
-    color:#5000ca !important;
-
-}
-
-
-
-
-.resume-button {
-
-
-    position:absolute !important;
-
-    right:25px;
-
-    top:50%;
-
-    transform:translateY(-50%);
-
-
-}
-
-
-
-
-
-
-/* ==========================================
-   DARK GLASS
-   ========================================== */
-
-
-.dark-mode .glass-navbar {
-
-
-    background:rgba(10,10,15,0.58) !important;
-
-
-    backdrop-filter:blur(10px) saturate(140%);
-
-    -webkit-backdrop-filter:blur(10px) saturate(140%);
-
-
-    border-color:rgba(255,255,255,0.25);
-
-
-    box-shadow:
-
-        0 30px 90px rgba(0,0,0,0.65),
-
-        inset 0 1px 5px rgba(255,255,255,0.18);
-
-
-}
-
-
-
-
-.dark-mode .glass-navbar::before {
-
-
-    background:
-
-        linear-gradient(
-
-            to bottom,
-
-            rgba(255,255,255,0.18),
-
-            transparent
-
-        );
-
-
-}
-
-
-
-
-
-
-/* ==========================================
-   LIGHT GLASS
-   ========================================== */
-
-
-.light-mode .glass-navbar {
-
-
-    background:rgba(255,255,255,0.48) !important;
-
-
-    backdrop-filter:blur(10px) saturate(160%);
-
-    -webkit-backdrop-filter:blur(10px) saturate(160%);
-
-
-    border-color:rgba(255,255,255,0.75);
-
-
-}
 
 
 
@@ -1063,24 +612,40 @@
 
     position:absolute;
 
+
+
     right:20px;
+
+
 
     top:50%;
 
+
+
     transform:translateY(-50%);
+
 
 
     z-index:5;
 
 
+
     display:flex;
 
+
+
     align-items:center;
+
+
 
     cursor:pointer;
 
 
+
 }
+
+
+
 
 
 
@@ -1089,17 +654,28 @@
 
     color:#272822;
 
+
+
     font-size:30px;
 
+
+
 }
+
+
 
 
 
 .dark-mode .mobile-menu-button svg {
 
+
     color:white;
 
+
+
 }
+
+
 
 
 
@@ -1107,22 +683,11 @@
 
 
 /* ==========================================
-   MOBILE EXPANDED NAV
+   MOBILE EXPANDING MENU ANIMATION
    ========================================== */
 
 
-.mobile-expanded {
-
-
-    border-radius:35px;
-
-
-}
-
-
-
 .mobile-nav-links {
-
 
     position:relative;
 
@@ -1139,21 +704,18 @@
     width:100%;
 
 
-    padding:
-
-        10px
-
-        0
-
-        20px;
+    padding:10px 0 20px;
 
 
-    animation:
+    overflow:hidden;
 
-        expandMenu 0.3s ease;
+
+    animation:fadeSlideMenu 0.35s ease forwards;
 
 
 }
+
+
 
 
 
@@ -1166,13 +728,77 @@
     justify-content:center;
 
 
+
     font-size:1rem !important;
+
 
 
     padding:10px !important;
 
 
+
 }
+
+
+
+
+
+@keyframes fadeSlideMenu {
+
+
+    from {
+
+
+        opacity:0;
+
+
+        transform:translateY(-8px);
+
+
+
+    }
+
+
+
+    to {
+
+
+        opacity:1;
+
+
+        transform:translateY(0);
+
+
+
+    }
+
+
+}
+
+
+
+
+.mobile-nav-button {
+
+
+    width:80% !important;
+
+
+
+    justify-content:center;
+
+
+
+    font-size:1rem !important;
+
+
+
+    padding:10px !important;
+
+
+
+}
+
 
 
 
@@ -1185,23 +811,79 @@
 
     from {
 
+
         opacity:0;
+
+
 
         transform:translateY(-10px);
 
+
+
     }
+
 
 
     to {
 
+
         opacity:1;
 
+
+
         transform:translateY(0);
+
+
 
     }
 
 
+
 }
+
+
+
+
+
+
+
+
+/* ==========================================
+   DARK MODE MOBILE TEXT
+   ========================================== */
+
+
+.dark-mode .mobile-nav-button {
+
+
+    color:white !important;
+
+
+
+}
+
+
+
+
+
+
+
+
+/* ==========================================
+   LIGHT MODE MOBILE TEXT
+   ========================================== */
+
+
+.light-mode .mobile-nav-button {
+
+
+    color:#272822 !important;
+
+
+
+}
+
+
 
 
 
@@ -1216,11 +898,17 @@
 @media(max-width:768px){
 
 
+
     #navigation {
+
 
         top:15px !important;
 
+
+
     }
+
+
 
 
 
@@ -1229,10 +917,15 @@
 
         width:calc(100% - 30px);
 
+
+
         border-radius:35px;
 
 
+
     }
+
+
 
 
 
@@ -1241,10 +934,15 @@
 
         min-height:48px !important;
 
+
+
         padding:5px 15px !important;
 
 
+
     }
+
+
 
 
 
@@ -1253,7 +951,23 @@
 
         left:15px;
 
+
+
     }
+
+
+
+
+
+    .nav-links {
+
+
+        display:none;
+
+
+
+    }
+
 
 
 
@@ -1263,35 +977,67 @@
         padding-bottom:15px;
 
 
-    }
-
-
-}
-
-
-
-
-
-
-/* SMALL PHONES */
-
-
-@media(max-width:400px){
-
-
-    .mobile-menu-button svg {
-
-        font-size:26px;
 
     }
+
+
 
 
 
     .mobile-nav-button {
 
-        font-size:0.9rem !important;
+
+        width:75% !important;
+
+
 
     }
 
 
+
 }
+
+
+
+
+
+
+
+
+/* ==========================================
+   SMALL PHONES
+   ========================================== */
+
+
+@media(max-width:400px){
+
+
+
+    .mobile-menu-button svg {
+
+
+        font-size:26px;
+
+
+
+    }
+
+
+
+
+
+    .mobile-nav-button {
+
+
+        font-size:0.9rem !important;
+
+
+
+    }
+
+
+
+
+}
+
+

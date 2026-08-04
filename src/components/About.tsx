@@ -67,7 +67,7 @@ function About() {
 
                     <p>
     I'm a Mechanical Engineer-in-Training with a background in
-    Engineering Physics with an option in Mechanical Engineering from
+    Engineering Physics, specializing in Mechanical Engineering from
     Queen's University.
 </p>
 
