@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.6e2f4345.css",
-    "main.js": "/portfolio/static/js/main.236474dc.js",
+    "main.js": "/portfolio/static/js/main.b60d8e28.js",
     "static/js/453.58c6167f.chunk.js": "/portfolio/static/js/453.58c6167f.chunk.js",
     "static/media/photo3.png": "/portfolio/static/media/photo3.59b8791f77097546a1a5.png",
     "static/media/turbinevideo.mp4": "/portfolio/static/media/turbinevideo.ac6b62f7d07cd976026e.mp4",
@@ -25,7 +25,7 @@
     "static/media/354.png": "/portfolio/static/media/354.3e9b58ac8c93ad8cc5a1.png",
     "static/media/solarphoto2.png": "/portfolio/static/media/solarphoto2.2726c06f03b60eda0c0c.png",
     "static/media/solarphoto3.png": "/portfolio/static/media/solarphoto3.8093567e2b722e261634.png",
-    "static/media/resume.pdf": "/portfolio/static/media/resume.3a08ef04c97b1f95a4f1.pdf",
+    "static/media/resume.pdf": "/portfolio/static/media/resume.1dad0376ccf58d87aca2.pdf",
     "static/media/batteryphoto1.png": "/portfolio/static/media/batteryphoto1.0d9e15b0e96c498aa82b.png",
     "static/media/batteryphoto2.png": "/portfolio/static/media/batteryphoto2.f6ac3044bc4a1b08abac.png",
     "static/media/thesisphoto2.png": "/portfolio/static/media/thesisphoto2.aaa6ebddd6469216073b.png",
@@ -34,11 +34,11 @@
     "static/media/hatch.png": "/portfolio/static/media/hatch.5b238e7308279113b444.png",
     "index.html": "/portfolio/index.html",
     "main.6e2f4345.css.map": "/portfolio/static/css/main.6e2f4345.css.map",
-    "main.236474dc.js.map": "/portfolio/static/js/main.236474dc.js.map",
+    "main.b60d8e28.js.map": "/portfolio/static/js/main.b60d8e28.js.map",
     "453.58c6167f.chunk.js.map": "/portfolio/static/js/453.58c6167f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6e2f4345.css",
-    "static/js/main.236474dc.js"
+    "static/js/main.b60d8e28.js"
   ]
 }
