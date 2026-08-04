@@ -7,6 +7,9 @@ import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
 import Toolbar from "@mui/material/Toolbar";
 
+import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close";
+
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import LightModeIcon from "@mui/icons-material/LightMode";
 
@@ -32,6 +35,7 @@ const navItems = [
 
 
 
+
 function Navigation({parentToChild, modeChange}:any){
 
 
@@ -43,7 +47,16 @@ function Navigation({parentToChild, modeChange}:any){
     const location = useLocation();
 
 
+
     const [scrolled,setScrolled] = useState(false);
+
+
+    const [isMobile,setIsMobile] = useState(
+        window.innerWidth <= 768
+    );
+
+
+    const [mobileOpen,setMobileOpen] = useState(false);
 
 
 
@@ -56,13 +69,65 @@ function Navigation({parentToChild, modeChange}:any){
 
 
 
-    // Initialize Liquid Glass
+
+
+    // Detect screen size
+
+    useEffect(()=>{
+
+
+        const resize = ()=>{
+
+
+            setIsMobile(window.innerWidth <= 768);
+
+
+            if(window.innerWidth > 768){
+
+                setMobileOpen(false);
+
+            }
+
+
+        };
+
+
+        window.addEventListener(
+            "resize",
+            resize
+        );
+
+
+        return ()=>{
+
+            window.removeEventListener(
+                "resize",
+                resize
+            );
+
+        };
+
+
+    },[]);
+
+
+
+
+
+
+
+
+
+
+    // Initialize liquid glass
 
     useEffect(()=>{
 
 
         if(!glassRoot.current || !glassElement.current)
+
             return;
+
 
 
         let instance:any;
@@ -74,13 +139,15 @@ function Navigation({parentToChild, modeChange}:any){
 
             instance = await LiquidGlass.init({
 
-                root: glassRoot.current as HTMLElement,
+                root:glassRoot.current as HTMLElement,
 
-                glassElements: [
+
+                glassElements:[
 
                     glassElement.current as HTMLElement
 
                 ]
+
 
             });
 
@@ -116,7 +183,10 @@ function Navigation({parentToChild, modeChange}:any){
 
 
 
-    // Scroll to section after loading from URL
+
+
+
+    // Scroll to hash after loading
 
     useEffect(()=>{
 
@@ -124,7 +194,9 @@ function Navigation({parentToChild, modeChange}:any){
         if(location.pathname === "/"){
 
 
-            const section = location.hash.replace("#","");
+            const section =
+            location.hash.replace("#","");
+
 
 
             if(section){
@@ -170,6 +242,10 @@ function Navigation({parentToChild, modeChange}:any){
 
 
 
+
+
+
+
     // Navbar scroll detection
 
     useEffect(()=>{
@@ -178,17 +254,32 @@ function Navigation({parentToChild, modeChange}:any){
         const scroll = ()=>{
 
 
-            setScrolled(window.scrollY > 50);
+            setScrolled(
+                window.scrollY > 50
+            );
 
 
         };
 
 
-        window.addEventListener("scroll",scroll);
+
+        window.addEventListener(
+            "scroll",
+            scroll
+        );
 
 
-        return ()=>window.removeEventListener("scroll",scroll);
 
+        return()=>{
+
+
+            window.removeEventListener(
+                "scroll",
+                scroll
+            );
+
+
+        };
 
 
     },[]);
@@ -201,7 +292,15 @@ function Navigation({parentToChild, modeChange}:any){
 
 
 
+
+
+
+
     const scrollToSection=(section:string)=>{
+
+
+        setMobileOpen(false);
+
 
 
         if(location.pathname === "/"){
@@ -239,7 +338,6 @@ function Navigation({parentToChild, modeChange}:any){
 
         }
 
-
         else{
 
 
@@ -247,7 +345,6 @@ function Navigation({parentToChild, modeChange}:any){
 
 
         }
-
 
 
     };
@@ -260,17 +357,27 @@ function Navigation({parentToChild, modeChange}:any){
 
 
 
+
+
+
+
+
     return (
 
 
-
         <div
+
             ref={glassRoot}
+
             className="glass-root"
+
         >
 
 
-            <CssBaseline/>
+
+            <CssBaseline />
+
+
 
 
 
@@ -282,48 +389,62 @@ function Navigation({parentToChild, modeChange}:any){
 
                 id="navigation"
 
-                className={`navbar-fixed-top ${scrolled?"scrolled":""}`}
+                className={`navbar-fixed-top ${
+                    scrolled ? "scrolled" : ""
+                }`}
 
             >
 
 
 
 
+
+
+
                 <div
+
 
                     ref={glassElement}
 
-                    className="glass-navbar"
+
+                    className={`glass-navbar ${
+                        mobileOpen ? "mobile-expanded" : ""
+                    }`}
+
+
 
                     data-config={JSON.stringify({
 
-    blurAmount:0.10,
+                        blurAmount:0.10,
 
-    refraction:1.5,
+                        refraction:1.5,
 
-    chromAberration:0.2,
+                        chromAberration:0.2,
 
-    edgeHighlight:0.45,
+                        edgeHighlight:0.45,
 
-    specular:0.8,
+                        specular:0.8,
 
-    fresnel:1.5,
+                        fresnel:1.5,
 
-    cornerRadius:50,
+                        cornerRadius:50,
 
-    zRadius:80,
+                        zRadius:80,
 
-    shadowOpacity:0.65,
+                        shadowOpacity:0.65,
 
-    saturation:-0.15,
+                        saturation:-0.15,
 
-    brightness:0.15,
+                        brightness:0.15,
 
-    bevelMode:0
+                        bevelMode:0
 
-})}
+                    })}
+
+
 
                 >
+
 
 
 
@@ -336,6 +457,11 @@ function Navigation({parentToChild, modeChange}:any){
 
 
 
+
+
+                        {/* DARK MODE BUTTON */}
+
+
                         <Box
 
                             className="mode-toggle"
@@ -345,21 +471,19 @@ function Navigation({parentToChild, modeChange}:any){
                         >
 
 
-
                             {
 
-                                mode==="dark"
+                                mode === "dark"
 
                                 ?
 
-                                <LightModeIcon/>
+                                <LightModeIcon />
 
                                 :
 
-                                <DarkModeIcon/>
+                                <DarkModeIcon />
 
                             }
-
 
 
                         </Box>
@@ -372,10 +496,142 @@ function Navigation({parentToChild, modeChange}:any){
 
 
 
-                        <Box className="nav-links">
+                        {/* MOBILE MENU ICON */}
+
+
+                        {
+
+                            isMobile &&
+
+
+                            <Box
+
+                                className="mobile-menu-button"
+
+                                onClick={()=>setMobileOpen(!mobileOpen)}
+
+                            >
+
+                                {
+
+                                    mobileOpen
+
+                                    ?
+
+                                    <CloseIcon />
+
+                                    :
+
+                                    <MenuIcon />
+
+                                }
+
+
+                            </Box>
+
+
+                        }
 
 
 
+
+
+
+
+
+
+
+
+
+                        {/* DESKTOP NAVIGATION */}
+
+
+                        {
+
+                            !isMobile &&
+
+
+                            <Box className="nav-links">
+
+
+                                {
+
+                                    navItems.map((item)=>(
+
+
+                                        <Button
+
+
+                                            key={item[0]}
+
+
+                                            className="nav-button"
+
+
+                                            onClick={()=>scrollToSection(item[1])}
+
+
+                                        >
+
+
+                                            {item[0]}
+
+
+                                        </Button>
+
+
+                                    ))
+
+                                }
+
+
+
+
+
+
+
+                                <Button
+
+                                    className="nav-button resume-button"
+
+                                    href={resume}
+
+                                    target="_blank"
+
+                                    rel="noreferrer"
+
+                                >
+
+
+                                    Resume
+
+
+                                </Button>
+
+
+
+                            </Box>
+
+
+                        }
+
+
+
+
+                    </Toolbar>
+                                        
+
+
+
+                    {/* MOBILE EXPANDED MENU */}
+
+
+                    {
+
+                        isMobile && mobileOpen &&
+
+
+                        <Box className="mobile-nav-links">
 
 
                             {
@@ -383,14 +639,17 @@ function Navigation({parentToChild, modeChange}:any){
                                 navItems.map((item)=>(
 
 
-
                                     <Button
+
 
                                         key={item[0]}
 
-                                        className="nav-button"
+
+                                        className="nav-button mobile-nav-button"
+
 
                                         onClick={()=>scrollToSection(item[1])}
+
 
                                     >
 
@@ -401,9 +660,7 @@ function Navigation({parentToChild, modeChange}:any){
                                     </Button>
 
 
-
                                 ))
-
 
                             }
 
@@ -411,19 +668,17 @@ function Navigation({parentToChild, modeChange}:any){
 
 
 
-
-
-
-
                             <Button
 
-                                className="nav-button resume-button"
+                                className="nav-button mobile-nav-button"
 
                                 href={resume}
 
                                 target="_blank"
 
                                 rel="noreferrer"
+
+                                onClick={()=>setMobileOpen(false)}
 
                             >
 
@@ -435,28 +690,15 @@ function Navigation({parentToChild, modeChange}:any){
 
 
 
-
-
-
-
                         </Box>
 
 
-
-
-
-
-
-                    </Toolbar>
-
-
+                    }
 
 
 
 
                 </div>
-
-
 
 
 
@@ -469,13 +711,10 @@ function Navigation({parentToChild, modeChange}:any){
 
 
 
-
         </div>
 
 
-
     );
-
 
 
 }
